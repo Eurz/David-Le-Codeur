@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="reset.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <link href="reset.css" rel="stylesheet" type="text/css" />
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <title>CV en CSS</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav role="navigation" class="nav-main" id="nav-main">
+                <a href="./index.html" class="active">Accueil</a>
+                <a href="#skills">Compétences</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#training">Formation</a>
+                <a href="#extra">Extras</a>
+                <a href="#identity">Contact</a>
+            </nav>
+            <header class="header">
+                <h1>
+                    `Développeur<br />
+                    <span>Front-end`</span>
+                </h1>
+                <div class="identity">
+                    <div class="infos arrow-down">
+                        <h2>David Blard</h2>
+                        <div class="contact">
+                            <div>GitHub</div>
+                            <div>Linkedin</div>
+                            <div>Twitter</div>
+                            <div>Site</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="banner-hero">
+                <div class="hero">
+                    <div class="hero-img hero1">
+                        <div class="name-overlay">
+                            <div class="hero-name">HTML 5</div>
+                        </div>
+                    </div>
+                    <div class="hero-img hero2">
+                        <div class="name-overlay">
+                            <div class="hero-name">CSS 3</div>
+                        </div>
+                    </div>
+                    <div class="hero-img hero3">
+                        <div class="name-overlay">
+                            <div class="hero-name">JAVASCRIPT</div>
+                        </div>
+                    </div>
+                    <div class="hero-img hero1">
+                        <div class="name-overlay">
+                            <div class="hero-name">REACT JS</div>
+                        </div>
+                    </div>
+                    <div class="hero-img hero2">
+                        <div class="name-overlay">
+                            <div class="hero-name">SYMFONY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main class="main">
+                <div class="left">
+                    <div class="skills" id="skills">
+                        <h2 class="title-section">Compétences</h2>
+
+                        <ul>
+                            <li>
+                                Conception graphique et prototypage dynamique
+                            </li>
+                            <li>
+                                Intégration de design de site internet /
+                                application mobile
+                            </li>
+                            <li>Gestion du Responsive Design</li>
+                            <li>Compatibilité cross-plateforms</li>
+                            <li>
+                                Connaissances des contraintes d’accessibilité
+                                Web
+                            </li>
+                            <li>Respect des standards du Web</li>
+                            <li>Optimisation SEO</li>
+                            <li>
+                                Conception affiches, flyers, cartes de visite,
+                                retouche photo ...
+                            </li>
+                            <li>Autonome, créatif, curieux, challenger</li>
+                        </ul>
+                        <div class="view-more">
+                            <a href="#skills-modal" class="js-modal">+</a>
+                        </div>
+                        <aside
+                            id="skills-modal"
+                            class="modal-wrapper"
+                            style="display: none"
+                        >
+                            <div class="modal-content">
+                                <div class="js-close-wrapper">
+                                    <button class="js-close-modal">
+                                        Fermer la boite modale
+                                    </button>
+                                </div>
+                                <h2>Mes compétences</h2>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Quisque blandit nunc
+                                    iaculis ex consectetur, vitae sagittis
+                                    ligula pulvinar.
+                                </p>
+                                <h3>Wedesign</h3>
+                                <p>
+                                    Etiam fringilla pretium justo bibendum
+                                    molestie. Quisque vulputate velit sed
+                                    scelerisque rutrum. Fusce ut iaculis ligula.
+                                    Nunc faucibus, felis eu vestibulum tempus,
+                                    est ante dapibus mauris, non dapibus nunc
+                                    velit sed lacus. Maecenas facilisis tempus
+                                    elit, nec euismod est porta nec. Ut aliquam
+                                    vestibulum interdum. Quisque justo sem,
+                                    fringilla quis pretium quis, elementum ut
+                                    erat. Maecenas vitae nunc arcu. Aenean
+                                    iaculis porttitor ullamcorper. Nam non nisl
+                                    id tortor rhoncus tempor.
+                                </p>
+                                <h3>Développement Front-End</h3>
+                                <p>
+                                    Vivamus ut varius leo. Proin aliquet purus
+                                    sed erat vestibulum, vitae gravida neque
+                                    sollicitudin. Donec dictum, mi ut tincidunt
+                                    ornare, metus nunc efficitur turpis, sit
+                                    amet suscipit tortor massa ac velit.
+                                    Maecenas luctus fermentum dui, sit amet
+                                    congue ligula eleifend vitae. Mauris id
+                                    faucibus ipsum, sed egestas lorem. Quisque
+                                    ut felis turpis. Nulla ac blandit ante.
+                                </p>
+                                <h3>Développement Back End</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Quisque blandit nunc
+                                    iaculis ex consectetur, vitae sagittis
+                                    ligula pulvinar. Proin eu metus ac nunc
+                                    consequat pretium a nec arcu. Sed nec nulla
+                                    ipsum. Praesent consectetur nulla et ligula
+                                    feugiat auctor. Integer pellentesque
+                                    scelerisque tellus sit amet fermentum. Cras
+                                    faucibus, leo vel dapibus lacinia, massa
+                                    velit pellentesque velit, nec cursus leo
+                                    nulla non risus.
+                                </p>
+                                <h3>Respect des standards</h3>
+                                <p>
+                                    Etiam fringilla pretium justo bibendum
+                                    molestie. Quisque vulputate velit sed
+                                    scelerisque rutrum. Fusce ut iaculis ligula.
+                                    Nunc faucibus, felis eu vestibulum tempus,
+                                    est ante dapibus mauris, non dapibus nunc
+                                    velit sed lacus. Maecenas facilisis tempus
+                                    elit, nec euismod est porta nec. Ut aliquam
+                                    vestibulum interdum. Quisque justo sem,
+                                    fringilla quis pretium quis, elementum ut
+                                    erat. Maecenas vitae nunc arcu. Aenean
+                                    iaculis porttitor ullamcorper. Nam non nisl
+                                    id tortor rhoncus tempor.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="training" id="training">
+                        <h2 class="title-section">Formations</h2>
+                        <div class="description promote arrow-left">
+                            <p>
+                                <span class="date"
+                                    >2021 // DEVELOPPEUR FULL-STACK / PHP
+                                    SYMFONY</span
+                                >
+                            </p>
+                            <p>Digital Campus Live - Studi</p>
+                        </div>
+                        <div class="description promote">
+                            <p>
+                                <span class="date"
+                                    >2004 - 2005 // WEBDESIGNER
+                                    INTÉGRATEUR</span
+                                >
+                            </p>
+                            <p>Centre de Formation IMAGE - Nimes</p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <span class="date"
+                                    >2001 - 2003 // CINÉMA D’ANIMATION</span
+                                >
+                            </p>
+                            <p>ILOI (Institut de l’Image de l’Océan)</p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <span class="date"
+                                    >1998 - 2000 // DEUG MIAS</span
+                                >
+                            </p>
+                            <p>
+                                Mathématiques et Informatiques Appliquées aux
+                                Sciences
+                            </p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <span class="date"
+                                    >1997 - 1998 // BAC S - OPTION
+                                    MATHÉMATHIQUES</span
+                                >
+                            </p>
+                            <p>Lycée Roland Garros - Ile de la Réunion</p>
+                        </div>
+                        <div class="view-more"><a href="#training">+</a></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="experiences" id="experiences">
+                        <h2 class="title-section">Expériences</h2>
+                        <div class="description">
+                            <p>
+                                <span class="date"
+                                    >2017 - 2020 // PHOTOGRAPHE
+                                    INDÉPENDANT</span
+                                >
+                            </p>
+                            <p class="place">
+                                Bedejiel Photographie - Occitanie
+                            </p>
+                            <p>
+                                Evénementiel: mariage, anniversaire, baptême,
+                                concerts, reportages... Prise de vue: lumière
+                                naturelle & studio Developpement des photos sous
+                                Lightroom / Photoshop
+                            </p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <span class="date"
+                                    >2005 - 2014 // WEBDESIGNER - INTÉGRATEUR -
+                                    GRAPHISTE</span
+                                >
+                            </p>
+                            <p class="place">Neteor - Saint Victor La Coste</p>
+                            <p>
+                                Gestion de la relation client - Etablissement du
+                                cahier des charges - Conception de zoning /
+                                wireframe / prototypage HD - Intégration HTML5 /
+                                CSS3 - Optimisation SEO - Compatibilité cross
+                                platform - Création d’affiches événementielles,
+                                flyers publicitaires
+                            </p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <span class="date">2003 // DESIGNER PROPS</span>
+                            </p>
+                            <p class="place">
+                                Seahorse Productions - Montrouge
+                            </p>
+                            <p>
+                                Designer props: design d’objets pour dessin
+                                d’animation
+                            </p>
+                        </div>
+                        <div class="view-more">
+                            <a href="#experiences">+</a>
+                        </div>
+                    </div>
+
+                    <div class="barcode"></div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="extra" id="extra">
+                    <div class="content">
+                        <div>
+                            <h3 class="title-section">Logiciels</h3>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                                <li>Indesign</li>
+                                <li>Adobe XD</li>
+                                <li>VS Code</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Langages web</h3>
+                            <ul>
+                                <li>CSS 3 / HTML 5</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Outils</h3>
+                            <ul>
+                                <li>Github</li>
+                                <li>Bootstrap</li>
+                                <li>SASS</li>
+                                <li>Wordpress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pell-mell">
+                    <p>
+                        JAVASCRIPT PIANO CRÉATIVITÉ CINÉMA PHOTOS BRICOLAGE
+                        CUISINER ADAPTATION EMPATHIE CURIOSITÉ AUTONOMIE
+                    </p>
+                </div>
+                <div>
+                    <a class="up" href="#nav-main"></a>
+                </div>
+            </footer>
+        </div>
+
+        <script src="cv-css.js" defer></script>
+    </body>
+</html>
