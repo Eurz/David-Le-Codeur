@@ -15,159 +15,88 @@
             referrerpolicy="no-referrer"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&family=Roboto+Condensed&family=Poppins&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Poppins&display=swap"
             rel="stylesheet"
         />
         <link href="reset.css" rel="stylesheet" type="text/css" />
         <link href="styles.css" rel="stylesheet" type="text/css" />
-        <title>David Is Coding - Developpeur Front-End</title>
+        <title>CV en CSS</title>
     </head>
     <body>
         <div class="container">
             <div class="sidebar">
-                <a href="./index.html" class="logo"
-                    ><span class="name">David</span
-                    ><span class="pseudo">Le Codeur</span></a
-                >
-                <a href="#" class="toggle-nav">+</a>
                 <nav class="nav-main" id="nav-main">
-                    <a href="#home" class="active js-anchor">Accueil</a>
-                    <!-- <a href="#projects" class="inactive">Projets</a> -->
-                    <a href="#learning" class="js-anchor">Parcours</a>
-                    <!-- <a href="#home" class="js-anchor inactive">Extras</a> -->
-                    <a href="#contactme" class="js-popme">Contact</a>
-                </nav>
-
-                <div class="socials" role="menubar">
-                    <a
-                        href="https://github.com/Eurz"
-                        target="_blank"
-                        role="menuitem"
-                        class="tooltip"
+                    <a href="./index.html">Accueil</a>
+                    <a href="#skills" class="active" class="js-anchor"
+                        >Compétences</a
                     >
-                        <span class="tooltiptext">GitHub</span
-                        ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/in/david-blard/"
-                        target="_blank"
-                        role="menuitem"
-                        class="tooltip"
-                        ><span class="tooltiptext">Linkedin</span
-                        ><i class="fa-brands fa-linkedin"></i
-                    ></a>
-                </div>
+                    <a href="#experiences" class="js-anchor">Expériences</a>
+                    <a href="#training" class="js-anchor">Formation</a>
+                    <a href="#extra" class="js-anchor">Extras</a>
+                    <a href="#identity" class="js-anchor">Contact</a>
+                </nav>
             </div>
 
             <main class="content-wrapper">
-                <section class="home row" id="home">
-                    <div class="row-section">
-                        <div class="presentation">
-                            <div class="text-infos">
-                                <header class="header">
-                                    <h1>
-                                        `Développeur<br />
-                                        <span>Front-end`</span>
-                                    </h1>
-                                </header>
-                                <p>
-                                    <strong>Hier</strong> après une dizaine
-                                    d'années en tant que Graphiste / Webdesigner
-                                    / Intégrateur à manipuler CSS, HTML,
-                                    Photoshop, Illustrator et autres joyeusté,
-                                    je me suis spécialisé dans ce domaine
-                                </p>
-                                <p>
-                                    <strong>Aujourd'hui</strong> je suis
-                                    Développeur Front End. Je me suis pris
-                                    d'affection pour Javascript avec une
-                                    spécialisation React JS afin d'offir une
-                                    expérience utilisateur la plus riche
-                                    possible.
-                                </p>
-
-                                <p>
-                                    <strong>Demain</strong> , j'aspire à passer
-                                    du "Côté obscur" et devenir... Full Stack.
-                                    Mais ça, c'est un autre chapitre
-                                </p>
-                            </div>
-                            <div class="banner-hero">
-                                <div>
-                                    <!-- <h2 class="title-h2">
-                                        `Ce que <span>Je pratique`</span>
-                                    </h2> -->
-                                    <div class="hero">
-                                        <div class="hero-img hero1">
-                                            <a
-                                                href="#html-modal"
-                                                class="name-overlay"
-                                            >
-                                                <div class="hero-name">
-                                                    HTML 5
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="hero-img hero2">
-                                            <div class="name-overlay">
-                                                <div class="hero-name">
-                                                    CSS 3
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hero-img hero3">
-                                            <div class="name-overlay">
-                                                <div class="hero-name">
-                                                    JAVASCRIPT
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hero-img hero4">
-                                            <div class="name-overlay">
-                                                <div class="hero-name">
-                                                    REACT JS
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hero-img hero5 inprogress">
-                                            <div class="name-overlay">
-                                                <div class="hero-name">
-                                                    SYMFONY
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <header class="header">
+                    <h1>
+                        `Développeur<br />
+                        <span>Front-end`</span>
+                    </h1>
+                    <div class="identity">
+                        <div class="infos arrow-down">
+                            <h2>David Blard</h2>
+                            <div class="socials" role="menubar">
+                                <a href="" role="menuitem"
+                                    ><i class="fa-brands fa-github"></i
+                                ></a>
+                                <a href="" role="menuitem"
+                                    ><i class="fa-brands fa-linkedin"></i
+                                ></a>
+                                <a href="" role="menuitem"
+                                    ><i class="fa-brands fa-twitter"></i
+                                ></a>
+                                <a href="" role="menuitem"
+                                    ><i class="fa-solid fa-link"></i
+                                ></a>
                             </div>
                         </div>
                     </div>
-                    <div class="scroll">
-                        Soyez curieux
-                        <i class="fa-solid fa-hand-point-right"></i>
+                </header>
+                <section class="banner-hero">
+                    <div class="hero">
+                        <div class="hero-img hero1">
+                            <a href="#html-modal" class="name-overlay js-modal">
+                                <div class="hero-name">HTML 5</div>
+                            </a>
+                        </div>
+                        <div class="hero-img hero2">
+                            <div class="name-overlay">
+                                <div class="hero-name">CSS 3</div>
+                            </div>
+                        </div>
+                        <div class="hero-img hero3">
+                            <div class="name-overlay">
+                                <div class="hero-name">JAVASCRIPT</div>
+                            </div>
+                        </div>
+                        <div class="hero-img hero1">
+                            <div class="name-overlay">
+                                <div class="hero-name">REACT JS</div>
+                            </div>
+                        </div>
+                        <div class="hero-img hero2">
+                            <div class="name-overlay">
+                                <div class="hero-name">SYMFONY</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- <section class="projects row" id="projects">
-                    <div class="row-section">
-                        <h2 class="title-h2">
-                            `Ce que j'ai fais`<span>Mes projets</span>
-                        </h2>
-                        <div class="projects">
-                            <div class="project">
-                                <div class="project-title"><h3>Projet</h3></div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-                <div class="row">
-                    <h2 class="title-h2" id="learning">
-                        `A propos<span>Mon parcours`</span>
-                    </h2>
-                </div>
-                <section class="main row">
+                <section class="main">
                     <div class="left">
-                        <div class="skills">
-                            <h3 class="title-section">Compétences</h3>
+                        <div class="skills" id="skills">
+                            <h2 class="title-section">Compétences</h2>
 
                             <ul>
                                 <li>
@@ -205,78 +134,83 @@
                                 <div class="modal-content">
                                     <div class="js-close-wrapper">
                                         <button class="js-close-modal">
-                                            Fermer
+                                            Fermer la boite modale
                                         </button>
                                     </div>
-                                    <h2 class="modal-title">Mes compétences</h2>
+                                    <h2>Mes compétences</h2>
 
-                                    <h3>Conception graphique</h3>
                                     <p>
-                                        C'est au travers de plus d'une centaine
-                                        de projets que j'ai affiné mes
-                                        compétences de
-                                        <strong>Webdesigner</strong> cumulant
-                                        ainsi les casquettes d'<strong
-                                            >UX</strong
-                                        >
-                                        et d'<strong>UI</strong>.
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Quisque blandit nunc
+                                        iaculis ex consectetur, vitae sagittis
+                                        ligula pulvinar.
                                     </p>
+                                    <h3>Wedesign</h3>
                                     <p>
-                                        A chaque projet, une identité visuelle
-                                        attractive propre à l'entreprise, une
-                                        optimisation de l'ergonomie pour un site
-                                        le plus intuitif possible dans son
-                                        utilisation. Mes outils
-                                        <br />
-                                        <br />
+                                        Etiam fringilla pretium justo bibendum
+                                        molestie. Quisque vulputate velit sed
+                                        scelerisque rutrum. Fusce ut iaculis
+                                        ligula. Nunc faucibus, felis eu
+                                        vestibulum tempus, est ante dapibus
+                                        mauris, non dapibus nunc velit sed
+                                        lacus. Maecenas facilisis tempus elit,
+                                        nec euismod est porta nec. Ut aliquam
+                                        vestibulum interdum. Quisque justo sem,
+                                        fringilla quis pretium quis, elementum
+                                        ut erat. Maecenas vitae nunc arcu.
+                                        Aenean iaculis porttitor ullamcorper.
+                                        Nam non nisl id tortor rhoncus tempor.
                                     </p>
-                                    <h3>
-                                        Intégration HTML/CSS desktop & mobile
-                                    </h3>
+                                    <h3>Développement Front-End</h3>
                                     <p>
-                                        En constante évolution,
-                                        <strong>HTML</strong> et
-                                        <strong>CSS</strong> est un
-                                        apprentissage sans fin. J'ai abordé ces
-                                        langages à leur débuts jusqu'à présent.
+                                        Vivamus ut varius leo. Proin aliquet
+                                        purus sed erat vestibulum, vitae gravida
+                                        neque sollicitudin. Donec dictum, mi ut
+                                        tincidunt ornare, metus nunc efficitur
+                                        turpis, sit amet suscipit tortor massa
+                                        ac velit. Maecenas luctus fermentum dui,
+                                        sit amet congue ligula eleifend vitae.
+                                        Mauris id faucibus ipsum, sed egestas
+                                        lorem. Quisque ut felis turpis. Nulla ac
+                                        blandit ante.
                                     </p>
+                                    <h3>Développement Back End</h3>
                                     <p>
-                                        Une application ou site
-                                        <strong>responsive</strong> reste un
-                                        défi quotidien tant il y a de cas
-                                        différent. Les possibilités sont sans
-                                        fin et lorsqu'une nouveauté apparait,
-                                        rien n'est plus jouissif que d'aller la
-                                        décortiquer, pour en tirer le substrat
-                                        pour le <strong>Web de demain</strong>.
-
-                                        <br />
-                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Quisque blandit nunc
+                                        iaculis ex consectetur, vitae sagittis
+                                        ligula pulvinar. Proin eu metus ac nunc
+                                        consequat pretium a nec arcu. Sed nec
+                                        nulla ipsum. Praesent consectetur nulla
+                                        et ligula feugiat auctor. Integer
+                                        pellentesque scelerisque tellus sit amet
+                                        fermentum. Cras faucibus, leo vel
+                                        dapibus lacinia, massa velit
+                                        pellentesque velit, nec cursus leo nulla
+                                        non risus.
                                     </p>
-                                    <h3>Responsive & Mobile First</h3>
+                                    <h3>Respect des standards</h3>
                                     <p>
-                                        Un site optimisé pour Mobile & Tablette
-                                        est le point de départ de toute
-                                        intégration. Le respect des standards
-                                        établi pour une expérience optimale.
-                                        <br /><br />
-                                    </p>
-                                    <h3>Optimisation SEO</h3>
-                                    <p>
-                                        Les bonnes pratiques pour une
-                                        optimisation pour les moteurs de
-                                        recherches sont pléthores. La sémantique
-                                        reste l'un des points clés sur lesquels
-                                        j'ai pu travailler. Google n'a qu'à bien
-                                        se tenir!
-                                        <br /><br />
+                                        Etiam fringilla pretium justo bibendum
+                                        molestie. Quisque vulputate velit sed
+                                        scelerisque rutrum. Fusce ut iaculis
+                                        ligula. Nunc faucibus, felis eu
+                                        vestibulum tempus, est ante dapibus
+                                        mauris, non dapibus nunc velit sed
+                                        lacus. Maecenas facilisis tempus elit,
+                                        nec euismod est porta nec. Ut aliquam
+                                        vestibulum interdum. Quisque justo sem,
+                                        fringilla quis pretium quis, elementum
+                                        ut erat. Maecenas vitae nunc arcu.
+                                        Aenean iaculis porttitor ullamcorper.
+                                        Nam non nisl id tortor rhoncus tempor.
                                     </p>
                                 </div>
                             </aside>
                         </div>
 
                         <div class="training" id="training">
-                            <h3 class="title-section">Formations</h3>
+                            <h2 class="title-section">Formations</h2>
                             <div class="description promote arrow-left">
                                 <p>
                                     <span class="date"
@@ -323,11 +257,14 @@
                                 </p>
                                 <p>Lycée Roland Garros - Ile de la Réunion</p>
                             </div>
+                            <div class="view-more">
+                                <a href="#training">+</a>
+                            </div>
                         </div>
                     </div>
                     <div class="right">
                         <div class="experiences" id="experiences">
-                            <h3 class="title-section">Expériences</h3>
+                            <h2 class="title-section">Expériences</h2>
                             <div class="description">
                                 <p>
                                     <span class="date"
@@ -380,13 +317,16 @@
                                     d’animation
                                 </p>
                             </div>
+                            <div class="view-more">
+                                <a href="#experiences">+</a>
+                            </div>
                         </div>
 
                         <div class="barcode"></div>
                     </div>
                 </section>
 
-                <section class="apps row">
+                <footer class="footer">
                     <div class="extra" id="extra">
                         <div class="content">
                             <div>
@@ -420,28 +360,22 @@
                         </div>
                     </div>
                     <div class="pell-mell">
-                        <div>
-                            <img src="./img/pell-mell.svg" alt="" width="370" />
-                        </div>
+                        <p>
+                            JAVASCRIPT PIANO CRÉATIVITÉ CINÉMA PHOTOS BRICOLAGE
+                            CUISINER ADAPTATION EMPATHIE CURIOSITÉ AUTONOMIE
+                        </p>
                     </div>
-                </section>
-                <!-- <section class="row">
-                    <div class="row-section">
-                        <h2 class="title-h2"><span>Contact</span></h2>
+                    <div>
+                        <a class="up" href="#nav-main"></a>
                     </div>
-                </section> -->
-                <section class="footer row">
-                    <a href="#credentials" class="">Crédits photo</a>
-                    <a href="#mentions" class="">Mentions </a>
-                </section>
-                <div>
-                    <a class="up" href="#nav-main"></a>
-                </div>
+                </footer>
             </main>
             <aside id="html-modal" class="modal-wrapper" style="display: none">
                 <div class="modal-content">
                     <div class="js-close-wrapper">
-                        <button class="js-close-modal">Fermer</button>
+                        <button class="js-close-modal">
+                            Fermer la boite modale
+                        </button>
                     </div>
                     <h2>HTML Power</h2>
 
@@ -499,12 +433,7 @@
                 </div>
             </aside>
         </div>
-        <div id="myPop" class="pop">
-            <a href="javascript:void(0)" class="closePop">&times;</a>
-            <div class="pop-content">
-                Retrouvez moi sur Linkedin <i class="fa-brands fa-linkedin"></i>
-            </div>
-        </div>
+
         <script src="script.js" defer></script>
     </body>
 </html>
