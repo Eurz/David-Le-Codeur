@@ -1,3 +1,3 @@
 # Main structure
 
-Ajout des fichiers initiax pour la base du site
+Ajout des fichiers initiaux pour la base du site
