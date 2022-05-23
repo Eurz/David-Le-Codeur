@@ -1,0 +1,11 @@
+:root {
+    --border-color: #fff;
+    --nav-height: 80px;
+    --nav-width: 12rem;
+    --main-marginleft: 14rem;
+    --main-font-size: 1.2em;
+    --main-text-color: #585858;
+    --first-color: #ae042b;
+    --bgmain-color: #ae042b;
+    --main-link-color: #ae042b;
+}
