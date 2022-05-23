@@ -9,7 +9,7 @@
             content="Je suis David, Développeur Front End, spécialisé dans la librairie React. Javascript est un langage de programmation incontournable pour apporter du dynamisme à vos pages web."
         />
         <link rel="shortcut icon" href="./favicon.svg" />
-        <link href="reset.css" rel="stylesheet" type="text/css" />
+        <link href="/css/reset.css" rel="stylesheet" type="text/css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -24,14 +24,13 @@
             rel="stylesheet"
         />
 
-        <link href="reset.css" rel="stylesheet" type="text/css" />
-        <link href="root.css" rel="stylesheet" type="text/css" />
-        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <link href="/css/root.css" rel="stylesheet" type="text/css" />
+        <link href="/css/styles.css" rel="stylesheet" type="text/css" />
         <title>David le codeur - Developpeur Front-End - UI Designer</title>
     </head>
     <body>
         <div class="container">
-            <div class="sidebar">
+            <header id="heder" class="header">
                 <a
                     href="./index.html"
                     class="logo"
@@ -77,24 +76,22 @@
                         ><i class="fa-brands fa-linkedin"></i
                     ></a>
                 </div>
-            </div>
+            </header>
 
             <main class="content-wrapper">
                 <section class="home row" id="home">
                     <div class="row-section">
                         <div class="presentation">
                             <div class="text-infos">
-                                <header class="header">
-                                    <h1>
-                                        `Développeur<br />
-                                        <span>Front-end`</span>
-                                    </h1>
-                                </header>
+                                <h2 class="title-h2">
+                                    `Développeur<br />
+                                    <span>Front-end`</span>
+                                </h2>
                                 <p>
                                     <strong>Hier</strong> après une dizaine
                                     d'années en tant que Graphiste / Webdesigner
                                     / Intégrateur à manipuler CSS, HTML,
-                                    Photoshop, Illustrator et autres joyeusté,
+                                    Photoshop, Illustrator et autres joyeusetés,
                                     je me suis spécialisé dans ce domaine
                                 </p>
                                 <p>
@@ -448,86 +445,29 @@
                         </div>
                     </div>
                 </section>
-                <!-- <section class="row">
-                    <div class="row-section">
-                        <h2 class="title-h2"><span>Contact</span></h2>
-                    </div>
-                </section> -->
-                <section class="footer row">
-                    <a href="#credentials" class="">Crédits photo</a>
+                <!-- <section class="footer row">
+                    <a href="#credentials" class="js-popme">Crédits photo</a>
                     <a href="#mentions" class="">Mentions </a>
-                </section>
+                </section> -->
                 <div>
-                    <a class="up" href="#nav-main"></a>
+                    <a class="up" href="#home"></a>
                 </div>
             </main>
-            <aside id="html-modal" class="modal-wrapper" style="display: none">
-                <div class="modal-content">
-                    <div class="js-close-wrapper">
-                        <button class="js-close-modal">Fermer</button>
-                    </div>
-                    <h2>HTML Power</h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque blandit nunc iaculis ex consectetur, vitae
-                        sagittis ligula pulvinar.
-                    </p>
-                    <h3>Wedesign</h3>
-                    <p>
-                        Etiam fringilla pretium justo bibendum molestie. Quisque
-                        vulputate velit sed scelerisque rutrum. Fusce ut iaculis
-                        ligula. Nunc faucibus, felis eu vestibulum tempus, est
-                        ante dapibus mauris, non dapibus nunc velit sed lacus.
-                        Maecenas facilisis tempus elit, nec euismod est porta
-                        nec. Ut aliquam vestibulum interdum. Quisque justo sem,
-                        fringilla quis pretium quis, elementum ut erat. Maecenas
-                        vitae nunc arcu. Aenean iaculis porttitor ullamcorper.
-                        Nam non nisl id tortor rhoncus tempor.
-                    </p>
-                    <h3>Développement Front-End</h3>
-                    <p>
-                        Vivamus ut varius leo. Proin aliquet purus sed erat
-                        vestibulum, vitae gravida neque sollicitudin. Donec
-                        dictum, mi ut tincidunt ornare, metus nunc efficitur
-                        turpis, sit amet suscipit tortor massa ac velit.
-                        Maecenas luctus fermentum dui, sit amet congue ligula
-                        eleifend vitae. Mauris id faucibus ipsum, sed egestas
-                        lorem. Quisque ut felis turpis. Nulla ac blandit ante.
-                    </p>
-                    <h3>Développement Back End</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque blandit nunc iaculis ex consectetur, vitae
-                        sagittis ligula pulvinar. Proin eu metus ac nunc
-                        consequat pretium a nec arcu. Sed nec nulla ipsum.
-                        Praesent consectetur nulla et ligula feugiat auctor.
-                        Integer pellentesque scelerisque tellus sit amet
-                        fermentum. Cras faucibus, leo vel dapibus lacinia, massa
-                        velit pellentesque velit, nec cursus leo nulla non
-                        risus.
-                    </p>
-                    <h3>Respect des standards</h3>
-                    <p>
-                        Etiam fringilla pretium justo bibendum molestie. Quisque
-                        vulputate velit sed scelerisque rutrum. Fusce ut iaculis
-                        ligula. Nunc faucibus, felis eu vestibulum tempus, est
-                        ante dapibus mauris, non dapibus nunc velit sed lacus.
-                        Maecenas facilisis tempus elit, nec euismod est porta
-                        nec. Ut aliquam vestibulum interdum. Quisque justo sem,
-                        fringilla quis pretium quis, elementum ut erat. Maecenas
-                        vitae nunc arcu. Aenean iaculis porttitor ullamcorper.
-                        Nam non nisl id tortor rhoncus tempor.
-                    </p>
-                </div>
-            </aside>
         </div>
         <div id="myPop" class="pop">
             <a href="javascript:void(0)" class="closePop">&times;</a>
             <div class="pop-content">
-                Retrouvez moi sur Linkedin <i class="fa-brands fa-linkedin"></i>
+                <h3>Retrouvez-moi sur Linkedin</h3>
+                <p class="big-icon">
+                    <a
+                        href="https://www.linkedin.com/in/david-blard/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-linkedin"></i
+                    ></a>
+                </p>
             </div>
         </div>
-        <script src="script.js" defer></script>
+        <script src="/js/script.js" defer></script>
     </body>
 </html>
