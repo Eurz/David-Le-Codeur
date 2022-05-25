@@ -26,6 +26,8 @@
 
         <link href="/css/root.css" rel="stylesheet" type="text/css" />
         <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="/css/popmodal.css" rel="stylesheet" type="text/css" />
+
         <title>David le codeur - Developpeur Front-End - UI Designer</title>
     </head>
     <body>
@@ -51,7 +53,7 @@
                     <!-- <a href="#home" class="js-anchor inactive">Extras</a> -->
                     <a
                         href="#contactme"
-                        class="js-popme"
+                        class="pop-modal-contact"
                         title="Contacter David le Codeur"
                         >Contact</a
                     >
@@ -111,9 +113,6 @@
                             </div>
                             <div class="banner-hero">
                                 <div>
-                                    <!-- <h2 class="title-h2">
-                                        `Ce que <span>Je pratique`</span>
-                                    </h2> -->
                                     <div class="hero">
                                         <div class="hero-img hero1">
                                             <a
@@ -164,18 +163,6 @@
                     </div>
                 </section>
 
-                <!-- <section class="projects row" id="projects">
-                    <div class="row-section">
-                        <h2 class="title-h2">
-                            `Ce que j'ai fais`<span>Mes projets</span>
-                        </h2>
-                        <div class="projects">
-                            <div class="project">
-                                <div class="project-title"><h3>Projet</h3></div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
                 <div class="row">
                     <h2 class="title-h2" id="learning">
                         `A propos<span>Mon parcours`</span>
@@ -445,6 +432,15 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="projects row" id="projects">
+                    <div class="row-section">
+                        <h2 class="title-h2">
+                            `Ce que j'ai fais<span>Mes projets`</span>
+                        </h2>
+                        <div class="projects-list"></div>
+                    </div>
+                </section>
                 <!-- <section class="footer row">
                     <a href="#credentials" class="js-popme">Crédits photo</a>
                     <a href="#mentions" class="">Mentions </a>
@@ -468,6 +464,22 @@
                 </p>
             </div>
         </div>
-        <script src="/js/script.js" defer></script>
+
+        <div class="pop-modal"></div>
+
+        <!-- Projects -->
+        <script src="./js/templates/ProjectCard.js"></script>
+        <script src="./js/models/Project.js"></script>
+        <script src="./js/models/ProjectData.js"></script>
+
+        <!-- Pop Modal -->
+        <script src="./js/models/PopModal.js"></script>
+
+        <!-- Effects -->
+        <script src="./js/effects/Logo.js"></script>
+
+        <!-- Main -->
+        <script src="./js/App.js" type="module"></script>
+        <script src="./js/script.js" defer></script>
     </body>
 </html>

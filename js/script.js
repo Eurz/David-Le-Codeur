@@ -141,17 +141,17 @@ anchors.forEach((anchor) => {
     })
 })
 
-const pop = document.querySelector('.js-popme')
-pop.addEventListener('click', openPop)
+// const pop = document.querySelector('.js-popme')
+// pop.addEventListener('click', openPop)
 
-const closeBtn = document.querySelector('.closePop')
-closeBtn.addEventListener('click', closePop)
+// const closeBtn = document.querySelector('.closePop')
+// closeBtn.addEventListener('click', closePop)
 
-function openPop() {
-    document.getElementById('myPop').style.width = '100%'
-}
+// function openPop() {
+//     document.getElementById('myPop').style.width = '100%'
+// }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closePop() {
-    document.getElementById('myPop').style.width = '0%'
-}
+// /* Close when someone clicks on the "x" symbol inside the overlay */
+// function closePop() {
+//     document.getElementById('myPop').style.width = '0%'
+// }

@@ -127,7 +127,7 @@ a {
 }
 
 .row {
-    margin: 20px 40px;
+    margin: 20px 40px 50px 40px;
 }
 
 .footer {
@@ -179,6 +179,18 @@ a {
     font-size: 28px;
     width: 4.5em;
 }
+.reverse {
+    opacity: 0;
+    transform: rotateY(-360deg);
+    display: inline-block;
+    transition: all 0.7s ease-in-out 0s;
+}
+
+.no-reverse {
+    transform: rotateY(0);
+    opacity: 1;
+}
+
 .logo .name {
     display: block;
     font-size: 1.5em;
@@ -315,10 +327,20 @@ a {
 /*******************/
 /* PROJECTS        */
 /*******************/
+.projects-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
 .project {
     width: 200px;
     height: 200px;
     background-color: lightgray;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
 }
 
 .title-h2 > span {
