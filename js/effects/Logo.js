@@ -1,4 +1,4 @@
-class Logo {
+export default class Logo {
     constructor() {
         this.target = document.querySelector('.logo .name')
 

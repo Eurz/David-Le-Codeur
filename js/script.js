@@ -112,6 +112,8 @@ let navIsOn = false
 
 let target = document.querySelector('.nav-main')
 function openNav(e) {
+    e.preventDefault()
+
     if (navIsOn) {
         // target.style.display = 'none'
 
@@ -126,7 +128,6 @@ function openNav(e) {
     target.classList.add('full-nav')
     document.body.classList.add('mobile')
     e.target.classList.add('toggle-on')
-    // e.target.preventDefault()
 }
 
 const anchors = document.querySelectorAll('.js-anchor')

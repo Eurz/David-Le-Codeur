@@ -1,9 +1,12 @@
-class Project {
+export default class Project {
     constructor(project) {
         this._title = project.title
         this._description = project.description
         this._tag = project.tag
         this._isActive = project.isActive
+        this._image = project.image
+
+        this.app = project.app
     }
 
     get title() {
@@ -20,4 +23,8 @@ class Project {
     get isActive() {
         return this._isActive
     }
+    get image() {
+        return this._image
+    }
+    get;
 }

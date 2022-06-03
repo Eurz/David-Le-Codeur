@@ -5,7 +5,9 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #efefef;
     font-size: var(--main-font-size);
-    position: relative;
+    height: 100vh;
+    /* cursor: none; */
+    /* position: relative; */
 }
 button {
     font-family: 'Lato', sans-serif;
@@ -128,8 +130,19 @@ a {
 
 .row {
     margin: 20px 40px 50px 40px;
+    animation: transitionIn 1s;
 }
 
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .footer {
     background-color: #333;
     padding: 1em;
@@ -329,20 +342,39 @@ a {
 /*******************/
 .projects-list {
     display: flex;
-    gap: 10px;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .project {
-    width: 200px;
+    width: calc(33% - 10px);
     height: 200px;
     background-color: lightgray;
+    background-size: cover;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-align: center;
+    margin-bottom: 1em;
+    /* color: #fff; */
+    position: relative;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
-
+.project.activated {
+    cursor: pointer;
+    opacity: 1;
+}
+.project img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+}
 .title-h2 > span {
     display: block;
     text-transform: uppercase;
@@ -652,7 +684,7 @@ h1 > span,
     padding-bottom: 25px;
 }
 p {
-    color: var(--main-text-color);
+    /* color: var(--main-text-color); */
 }
 .modal-title::before {
     content: '';
@@ -883,9 +915,17 @@ p {
     .extra .content {
         flex-direction: column;
     }
+    .project {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .project {
+        width: calc(100%);
+        margin: 0 0 5px 0;
+    }
 }
 @media (prefers-reduced-motion: reduce) {
     .logo {
@@ -940,12 +980,12 @@ p {
 /* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 60px;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
     text-align: center;
     padding: 5px;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 0.6em;
 
     /* Position the tooltip text */
@@ -953,7 +993,7 @@ p {
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -30px;
 
     /* Fade in tooltip */
     opacity: 0;
@@ -976,5 +1016,109 @@ p {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-    transform: translateY(-1.2em);
+    transform: translateY(0em);
+}
+
+.btn {
+    padding: 0.5em;
+    font-size: inherit;
+    background-color: var(--bgmain-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+
+/******  LOADER  ******/
+.loader {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    /* height: 0; */
+    position: fixed;
+    /* display: flex; */
+    left: 0;
+    transition: all 2s ease 0s;
+    top: 0;
+}
+.loader-on {
+    height: 100vh;
+    opacity: 1;
+}
+
+/******  CURSOR  ******/
+.cursor {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+}
+.cursor-display {
+    /* opacity: 1; */
+}
+.cursor::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    display: block;
+    background-color: teal;
+}
+.cursor1 {
+    animation: cursor1 1s linear 1s;
+}
+.cursor1::before {
+    animation: cursor2 1s linear 0s;
+}
+
+@keyframes cursor1 {
+    0% {
+        transform: scale(1);
+        background-color: #333;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+@keyframes cursor2 {
+    0% {
+        transform: scale(1);
+        border: 1px solid crimson;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+/****** DAMIER  ********/
+/************/
+#damier {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: orange; */
+    height: 100vh;
+    z-index: 100;
+    overflow: hidden;
+}
+.item {
+    /* background-color: red; */
+    /* opacity: 0.9; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: opacity 0.5s, transform 0.5s;
+    /* pointer-events: none; */
 }

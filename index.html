@@ -9,7 +9,6 @@
             content="Je suis David, Développeur Front End, spécialisé dans la librairie React. Javascript est un langage de programmation incontournable pour apporter du dynamisme à vos pages web."
         />
         <link rel="shortcut icon" href="./favicon.svg" />
-        <link href="/css/reset.css" rel="stylesheet" type="text/css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -23,10 +22,11 @@
             href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&family=Roboto+Condensed&family=Poppins&display=swap"
             rel="stylesheet"
         />
+        <link href="./css/reset.css" rel="stylesheet" type="text/css" />
 
-        <link href="/css/root.css" rel="stylesheet" type="text/css" />
-        <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-        <link href="/css/popmodal.css" rel="stylesheet" type="text/css" />
+        <link href="./css/root.css" rel="stylesheet" type="text/css" />
+        <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="./css/popmodal.css" rel="stylesheet" type="text/css" />
 
         <title>David le codeur - Developpeur Front-End - UI Designer</title>
     </head>
@@ -48,9 +48,8 @@
                         title="David - Développeur Front End"
                         >Accueil</a
                     >
-                    <!-- <a href="#projects" class="inactive">Projets</a> -->
                     <a href="#learning" class="js-anchor">Parcours</a>
-                    <!-- <a href="#home" class="js-anchor inactive">Extras</a> -->
+                    <a href="#projects" class="js-anchor">Projets</a>
                     <a
                         href="#contactme"
                         class="pop-modal-contact"
@@ -450,36 +449,25 @@
                 </div>
             </main>
         </div>
-        <div id="myPop" class="pop">
-            <a href="javascript:void(0)" class="closePop">&times;</a>
-            <div class="pop-content">
-                <h3>Retrouvez-moi sur Linkedin</h3>
-                <p class="big-icon">
-                    <a
-                        href="https://www.linkedin.com/in/david-blard/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fa-brands fa-linkedin"></i
-                    ></a>
-                </p>
-            </div>
-        </div>
 
         <div class="pop-modal"></div>
+        <div class="loader"></div>
+        <div class="cursor"><div class="cursor-in"></div></div>
 
         <!-- Projects -->
-        <script src="./js/templates/ProjectCard.js"></script>
-        <script src="./js/models/Project.js"></script>
-        <script src="./js/models/ProjectData.js"></script>
+        <!-- <script src="./js/templates/ProjectCard.js"></script> -->
+        <!-- <script src="./js/models/Project.js"></script> -->
+        <!-- <script src="./js/models/ProjectLists.js" type="module"></script> -->
 
         <!-- Pop Modal -->
-        <script src="./js/models/PopModal.js"></script>
+        <!-- <script src="./js/models/PopModal.js"></script> -->
 
         <!-- Effects -->
-        <script src="./js/effects/Logo.js"></script>
+        <!-- <script src="./js/effects/Logo.js"></script> -->
+        <!-- <script src="./js/effects/Damier.js"></script> -->
 
         <!-- Main -->
         <script src="./js/App.js" type="module"></script>
-        <script src="./js/script.js" defer></script>
+        <!-- <script src="./js/script.js" defer></script> -->
     </body>
 </html>
