@@ -1,5 +1,6 @@
 // import { PopModal } from './models/PopModal'
 
+import Effects from './effects/index.js'
 import Logo from './effects/Logo.js'
 import { PopModal } from './models/PopModal.js'
 import ProjectLists from './models/ProjectLists.js'
@@ -7,7 +8,7 @@ import ProjectLists from './models/ProjectLists.js'
 class App {
     constructor() {
         this.projects = new ProjectLists()
-        this.logo = new Logo()
+        this.effects = new Effects()
         // this.damier = new Damier(4)
         // this.damier.render()
     }
@@ -29,6 +30,7 @@ class App {
         </p>`
 
         const popModalContact = new PopModal(contactContent)
+
         document
             .querySelector('.pop-modal-contact')
             .addEventListener('click', () => {
@@ -57,17 +59,18 @@ class App {
         //         cursortwo.classList.remove('cursor2')
         //     }, 500)
         // })
-        // const links = Array.from(document.querySelectorAll(' .nav-main a'))
 
-        // let tempLink = links.find((link) => link.classList.contains('active'))
-        // links.map((link) => {
-        //     link.addEventListener('click', ({ target }) => {
-        //         console.log('TempLink = ', tempLink)
-        //         tempLink.classList.remove('active')
-        //         target.classList.add('active')
-        //         tempLink = target
-        //     })
-        // })
+        // ACTIVE LINKS
+        const links = Array.from(document.querySelectorAll(' .nav-main a'))
+
+        let tempLink = links.find((link) => link.classList.contains('active'))
+        links.map((link) => {
+            link.addEventListener('click', ({ target }) => {
+                tempLink.classList.remove('active')
+                target.classList.add('active')
+                tempLink = target
+            })
+        })
 
         // POP LINK
         // const target = document.querySelector('.pop-link')

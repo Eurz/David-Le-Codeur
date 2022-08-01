@@ -14,7 +14,7 @@ export class PopModal {
         const context = this
         setTimeout(() => {
             this.$modalWrapper.innerHTML = ''
-            // context.clearTimeout(context.timer)
+            this.$contentWrapper.className = 'pop-modal-content'
         }, 1000)
     }
 
@@ -30,8 +30,6 @@ export class PopModal {
 
     render() {
         this.$modalWrapper.classList.add('pop-modal-on')
-        // const content = `<a href="#" class="closePop">&times;</a>
-        // ${this._content}`
 
         this.$contentWrapper.innerHTML = this._content
         this.$contentWrapper.innerHTML += `<a href="#" class="closePop">&times;</a>`
@@ -40,50 +38,33 @@ export class PopModal {
         this.addListener()
     }
 }
-
-export function fullScreenModal(popModal, project) {
-    // PopModal.classList.add('pop-fullscreen')
-
-    // const btnFullSc<reen = document.createElement('button')
-    // btnFullScreen.textContent = 'Full'
-    // const test = PopModal.$contentWrapper.querySelector('.btn-start')
-    // test.addEventListener('click', (e) => {
+/**
+ *
+ * @param {Object} popModal - Modal to display a project from projectCard
+ * @param {Object} projectCard - Project data
+ * @returns
+ */
+export function fullScreenModal(popModal, projectCard) {
     const target = popModal.$contentWrapper
 
     popModal.setFullScreen = () => {
-        target.classList.add(`pop-fullscreen`)
-        console.log('Full Screen Modal Applied')
+        setTimeout(() => {
+            target.classList.add(`pop-fullscreen`)
+            // console.log('Full Screen Modal Applied')
+        }, 500)
     }
+    popModal.$contentWrapper.id = projectCard._project.title
 
-    project.$wrapper.addEventListener('click', () => {
-        popModal.setFullScreen()
-        if (project.app) {
-            project.app()
-        }
-    })
-    console.log('Full Screen Modal Init')
-    // })
-
+    if (projectCard._project.isActive) {
+        projectCard.$wrapper.addEventListener('click', () => {
+            popModal.setFullScreen()
+            if (projectCard.app) {
+                popModal._content = projectCard
+                    .app(popModal.$contentWrapper)
+                    .init()
+                // console.log('Application called')
+            }
+        })
+    }
     return popModal
 }
-
-// function addAppInModal(PopModal) {
-//     PopModal.buttonCreateProject = () => {
-//         const button = document.createElement('button')
-//         button.className = 'btn btn-tart'
-//         button.textContent = 'Start'
-//         // PopModal.$contentWrapper.appendChild(button)
-//         document.querySelector('.pop-modal-content').appendChild(button)
-
-//         button.addEventListener('click', () => {
-//             console.log('Lancement dune partie')
-//             const target =
-//                 PopModal.$modalWrapper.querySelector('.pop-modal-content')
-
-//             target.classList.add('pop-fullscreen')
-//             console.log(target)
-//         })
-//     }
-
-//     return PopModal
-// }

@@ -4,6 +4,7 @@ export default class Project {
         this._description = project.description
         this._tag = project.tag
         this._isActive = project.isActive
+        this._className = project.className
         this._image = project.image
 
         this.app = project.app
@@ -23,8 +24,11 @@ export default class Project {
     get isActive() {
         return this._isActive
     }
+
     get image() {
         return this._image
     }
-    get;
+    get className() {
+        return this._className
+    }
 }
