@@ -1,4 +1,4 @@
-class Damier {
+export default class Damier {
     constructor(nbCases) {
         this._nbCases = nbCases
         this.root = document.createElement('div')
@@ -6,6 +6,7 @@ class Damier {
 
         this.root.id = 'damier'
         document.body.appendChild(this.root)
+        this.render()
     }
 
     colorCode() {
@@ -15,18 +16,18 @@ class Damier {
             finalCode =
                 finalCode + makingColorCode[Math.floor(Math.random() * 16)]
         }
-        finalCode = finalCode + '3333'
+        finalCode = finalCode + '0000'
         return finalCode
     }
 
     createBox(texte) {
         const box = document.createElement('div')
 
-        const boxWidth = 100 / Math.sqrt(this._nbCases) + '%'
-        const boxHeight = 100 / Math.sqrt(this._nbCases) + '%'
+        // const boxWidth = 100 / Math.sqrt(this._nbCases) + '%'
+        // const boxHeight = 100 / Math.sqrt(this._nbCases) + '%'
 
-        box.style.width = boxWidth
-        box.style.height = boxHeight
+        // box.style.width = boxWidth
+        // box.style.height = boxHeight
         box.className = 'item'
         box.textContent = texte
         // console.log(box)
@@ -36,6 +37,8 @@ class Damier {
     deleteBoxes() {
         const elementsToDelete = (this.root.style.display = 'none')
     }
+
+    incCounter() {}
 
     changeOpacity(e) {
         console.log('Counter = ', this.counter)
@@ -49,6 +52,7 @@ class Damier {
         if (this.counter === this._nbCases - 1) {
             console.log('Fin du jeu')
         }
+
         this.removeEventListener('click', this.changeOpacity)
         // this.parentElement.removeChild(this)
     }
@@ -58,11 +62,14 @@ class Damier {
             const box = this.createBox('Click me')
             box.style.backgroundColor = this.colorCode()
             box.id = 'box' + i
-            box.addEventListener('click', this.changeOpacity)
+
+            let context = this
+            box.addEventListener('click', context.changeOpacity)
             box.addEventListener('transitionend', () => {
                 console.log('Transition ended pour ' + box.id)
                 box.style.transform = 'scale(1)'
             })
+
             this.root.appendChild(box)
         }
     }
