@@ -76,7 +76,7 @@ strong {
 }
 
 a {
-    color: #fff;
+    color: #ae042b;
     text-decoration: none;
 }
 /*******************/
@@ -257,6 +257,7 @@ a {
 /*******************/
 .toggle-nav {
     display: none;
+    color: #fff;
     font-size: 50px;
     z-index: 11;
     transition: transform 0.3s;
@@ -377,6 +378,11 @@ a {
 }
 .meteoapp-project {
     background-image: url('/img/projects/meteoapp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dicegame-project {
+    background-image: url('/img/projects/diceapp.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

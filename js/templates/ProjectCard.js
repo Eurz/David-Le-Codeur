@@ -14,10 +14,11 @@ export default class ProjectCard {
             `project pop-link ${project.className}`
         )
         this.title = `<h3>${this._project.title}</h3>`
+        this.link = this._project.link
         this.description = `<p>${this._project.description}</p>`
         this.className = this._project.className
         this.popModal = new PopModal(
-            `${this.title} ${this.description} <a href='./weatherapp' target='_blank' class='btn'>Lancer</a> `
+            `${this.title} ${this.description} <a href='${this.link}' target='_blank' class='btn'>Lancer</a> `
         )
         this.isActive = project.isActive
         this.app = project.app

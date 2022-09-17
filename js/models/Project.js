@@ -6,7 +6,7 @@ export default class Project {
         this._isActive = project.isActive
         this._className = project.className
         this._image = project.image
-
+        this._link = project.link
         this.app = project.app
     }
 
@@ -30,5 +30,8 @@ export default class Project {
     }
     get className() {
         return this._className
+    }
+    get link() {
+        return this._link
     }
 }

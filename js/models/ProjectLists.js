@@ -11,7 +11,16 @@ export default class ProjectLists {
                 tag: 'MeteoApp',
                 className: 'meteoapp-project',
                 isActive: true,
-                link: '#',
+                link: 'https://david-meteo-app.herokuapp.com/',
+            },
+            {
+                title: 'Dice Game',
+                description:
+                    'Dans ce jeu de dés, atteignez les 100 points avant votre adversaire',
+                tag: 'DiceGame',
+                className: 'dicegame-project',
+                isActive: true,
+                link: 'https://eurz.github.io/',
             },
             {
                 title: 'Memory Card Game',
