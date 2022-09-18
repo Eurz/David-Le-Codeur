@@ -14,8 +14,9 @@ export default class ProjectLists {
             },
             {
                 title: 'Dice Game',
-                description:
-                    '<p>Dans ce jeu de dés, atteignez les 100 points avant votre adversaire</p>',
+                description: `<p>Le jeu comprend 2 joueurs sur un seul et même écran. </p>
+                    <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
+                   <p>Le premier à obtenir un score global de 100 points gagne la partie</p>`,
                 image: 'diceapp.jpg',
                 isActive: true,
                 link: 'https://eurz.github.io/',
