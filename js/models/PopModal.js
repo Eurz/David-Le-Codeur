@@ -2,10 +2,11 @@
  * Create a pop up with the div.pop-modal wrapper
  */
 export class PopModal {
-    constructor(content) {
+    constructor(title, content) {
         this.$modalWrapper = document.querySelector('.pop-modal')
         this.$contentWrapper = document.createElement('div')
         this.$contentWrapper.classList.add('pop-modal-content')
+        this._title = title
         this._content = content
     }
 
@@ -20,7 +21,7 @@ export class PopModal {
 
     addListener() {
         this.$modalWrapper
-            .querySelector('.closePop')
+            .querySelector('.close-pop')
             .addEventListener('click', (e) => {
                 e.preventDefault()
 
@@ -31,13 +32,18 @@ export class PopModal {
     render() {
         this.$modalWrapper.classList.add('pop-modal-on')
 
-        this.$contentWrapper.innerHTML = this._content
-        this.$contentWrapper.innerHTML += `<a href="#" class="closePop">&times;</a>`
+        this.$contentWrapper.innerHTML = `
+            <div class="pop-header">
+                <h3>${this._title}</h3>
+                <a href="#" class="close-pop"><i class="fa-sharp fa-solid fa-xmark"></i></a>
+            </div>`
+        this.$contentWrapper.innerHTML += `<div class="pop-content">${this._content}</div>`
+        this.$contentWrapper.innerHTML += `<div class="pop-footer"></div>`
         this.$modalWrapper.appendChild(this.$contentWrapper)
-        // this.$modalWrapper.innerHTML = content
         this.addListener()
     }
 }
+
 /**
  *
  * @param {Object} popModal - Modal to display a project from projectCard

@@ -9,16 +9,14 @@ export default class ProjectCard {
     constructor(project) {
         this._project = project
         this.$wrapper = document.createElement('div')
-        this.$wrapper.setAttribute(
-            'class',
-            `project pop-link ${project.className}`
-        )
-        this.title = `<h3>${this._project.title}</h3>`
+        this.$wrapper.setAttribute('class', `project pop-link`)
+        this.title = `${this._project.title}`
         this.link = this._project.link
+        this.image = this._project.image
         this.description = `<p>${this._project.description}</p>`
-        this.className = this._project.className
         this.popModal = new PopModal(
-            `${this.title} ${this.description} <a href='${this.link}' target='_blank' class='btn'>Lancer</a> `
+            this.title,
+            `<div>${this.description}</div> <a href='${this.link}' target='_blank' class='btn'><i class="fa-solid fa-right-to-bracket"></i>Voir l'application</a> `
         )
         this.isActive = project.isActive
         this.app = project.app
@@ -34,7 +32,8 @@ export default class ProjectCard {
 
     render() {
         const projectCard = `
-                <div class="project-title">
+                <img src="../../img/projects/${this._project.image}" width="250" alt="${this.title}"/>
+                <div class="project-description">
                 <h3>Projet #${ProjectLists.counter}</h3>
                 <p>${this._project.title}</p>
                 </div>

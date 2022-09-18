@@ -5,38 +5,34 @@ export default class ProjectLists {
     constructor() {
         this.projectsData = [
             {
-                title: 'Meteo App',
+                title: 'Application Meteo',
                 description:
-                    'Une application météo proposant des fonctionnalités basiques :<br/> - météo géolocalisée selon votre position<br/> - météo par ville<br/>- météo quotidienne et par heure ',
-                tag: 'MeteoApp',
-                className: 'meteoapp-project',
+                    '<p>Une application météo proposant des fonctionnalités basiques :</p><ul><li>météo géolocalisée selon votre position</li><li>météo par ville</li><li> météo quotidienne et par heure</li></ul> ',
+                image: 'meteoapp.jpg',
                 isActive: true,
                 link: 'https://david-meteo-app.herokuapp.com/',
             },
             {
                 title: 'Dice Game',
                 description:
-                    'Dans ce jeu de dés, atteignez les 100 points avant votre adversaire',
-                tag: 'DiceGame',
-                className: 'dicegame-project',
+                    '<p>Dans ce jeu de dés, atteignez les 100 points avant votre adversaire</p>',
+                image: 'diceapp.jpg',
                 isActive: true,
                 link: 'https://eurz.github.io/',
             },
             {
                 title: 'Memory Card Game',
                 description:
-                    'Dans ce mini-jeu, exercez votre mémoire en trouvant les paires de cartes',
-                tag: 'MemoryCardGame',
-                className: 'memorygame-project',
+                    '<p>Dans ce mini-jeu, exercez votre mémoire en trouvant les paires de cartes</p>',
+                image: 'meteoapp.jpg',
                 isActive: false,
                 link: '#',
             },
             {
                 title: 'Trouver le mot',
                 description:
-                    "Votre objectif: trouver le mot caché. Vous n'avez que trois essais ^^",
-                tag: 'GuessTheWord',
-                className: 'findtheword-project.jpg',
+                    "<p>Votre objectif: trouver le mot caché. Vous n'avez que trois essais ^^</p>",
+                image: 'meteoapp.jpg',
                 isActive: false,
                 link: '#',
             },
