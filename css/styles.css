@@ -1054,55 +1054,6 @@ p {
     opacity: 1;
 }
 
-/******  CURSOR  ******/
-.cursor {
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 1;
-}
-.cursor-display {
-    /* opacity: 1; */
-}
-.cursor::before {
-    content: '';
-    width: 3px;
-    height: 3px;
-    display: block;
-    background-color: teal;
-}
-.cursor1 {
-    animation: cursor1 1s linear 1s;
-}
-.cursor1::before {
-    animation: cursor2 1s linear 0s;
-}
-
-@keyframes cursor1 {
-    0% {
-        transform: scale(1);
-        background-color: #333;
-        opacity: 1;
-    }
-    100% {
-        transform: scale(10);
-        opacity: 0;
-    }
-}
-
-@keyframes cursor2 {
-    0% {
-        transform: scale(1);
-        border: 1px solid crimson;
-        opacity: 1;
-    }
-    100% {
-        transform: scale(10);
-        opacity: 0;
-    }
-}
 /****** DAMIER  ********/
 /************/
 #damier {

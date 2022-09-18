@@ -1,5 +1,5 @@
 import { PopModal } from '../models/PopModal.js'
-import ProjectLists from '../models/ProjectLists.js'
+import ProjectLists from '../viewmodels/ProjectLists.js'
 
 export default class ProjectCard {
     /**
