@@ -32,7 +32,7 @@ export default class ProjectCard {
 
     render() {
         const projectCard = `
-                <img src="../../img/projects/${this._project.image}" width="250" alt="${this.title}"/>
+                <img src="../../img/projects/${this._project.image}" class="thumb" alt="${this.title}"/>
                 <div class="project-description">
                 <h3>Projet #${ProjectLists.counter}</h3>
                 <p>${this._project.title}</p>
