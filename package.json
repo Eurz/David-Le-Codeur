@@ -1,0 +1,18 @@
+{
+    "name": "david-le-codeur-tina",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "tinacms dev -c \"next dev\"",
+        "build": "tinacms build && next build",
+        "start": "tinacms build && next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "eslint": "8.49.0",
+        "eslint-config-next": "13.4.19",
+        "next": "13.4.19",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    }
+}
