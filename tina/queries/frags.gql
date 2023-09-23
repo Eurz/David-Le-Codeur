@@ -1,0 +1,6 @@
+fragment SeoParts on Page {
+    seo {
+        title
+        description
+    }
+}

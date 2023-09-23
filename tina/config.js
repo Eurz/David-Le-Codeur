@@ -7,7 +7,8 @@ import projects from './collections/projects'
 import events from './collections/events'
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
+const branch =
+    process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'version-2'
 
 export default defineConfig({
     branch,
