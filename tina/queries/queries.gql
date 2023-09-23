@@ -1,0 +1,17 @@
+query seoPage($relativePath: String!) {
+  page(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    
+    ...SeoParts
+  }
+}

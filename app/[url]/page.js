@@ -1,7 +1,6 @@
 import { Blocks } from '@/components/blocks/Blocks'
 import Layout from '@/components/ui/Layout'
 import client from '@/tina/__generated__/client'
-import { notFound } from 'next/navigation'
 
 export async function generateMetadata({ params }) {
     const seoData = await client.queries.seoPage({
