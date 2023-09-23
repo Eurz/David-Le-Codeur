@@ -8,7 +8,10 @@ export default function EventList({ data }) {
             {eventsList &&
                 eventsList.map((event, i) => {
                     const featured = event.featured ? 'promote' : ''
-
+                    const eventTitle = event.title ? `${event.title}` : ''
+                    const eventDate = event.textDate
+                        ? `${event.textDate} // `
+                        : ''
                     return (
                         <>
                             <div
@@ -18,7 +21,7 @@ export default function EventList({ data }) {
                             >
                                 <p>
                                     <span className="date">
-                                        {event.textDate} // {event.title}
+                                        {`${eventDate}  ${eventTitle}`}
                                     </span>
                                 </p>
                                 <p className="place">

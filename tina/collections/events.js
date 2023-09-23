@@ -47,7 +47,12 @@ const events = {
                 },
                 { name: 'startDate', label: 'Start', type: 'datetime' },
                 { name: 'endDate', label: 'End', type: 'datetime' },
-                { name: 'textDate', label: 'Text date', type: 'string' },
+                {
+                    name: 'textDate',
+                    label: 'Text date',
+                    type: 'string',
+                    ui: { description: 'Example : 2003 - 2005' },
+                },
 
                 { name: 'entreprise', label: 'Etablissement', type: 'string' },
                 { name: 'place', label: 'Lieu', type: 'string' },

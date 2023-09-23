@@ -8,6 +8,7 @@ export default function DesktopNav({ data }) {
         const pageLink =
             link.href !== '' ? link.href : `/${link.page?._sys.filename}`
         const isActive = pathname === pageLink
+
         return (
             <Link
                 key={i}

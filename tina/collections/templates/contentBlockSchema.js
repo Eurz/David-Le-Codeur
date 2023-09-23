@@ -30,8 +30,19 @@ export const contentBlockSchema = {
             type: 'rich-text',
             templates: [
                 {
-                    name: 'Callout',
+                    name: 'callout',
                     label: 'Callout',
+                    fields: [
+                        {
+                            name: 'message',
+                            label: 'Message',
+                            type: 'string',
+                        },
+                    ],
+                },
+                {
+                    name: 'separator',
+                    label: 'Separator',
                     fields: [
                         {
                             name: 'message',

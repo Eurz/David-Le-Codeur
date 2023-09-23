@@ -1,4 +1,4 @@
-import { oswald, robotoCondensed } from '@/app/utils/fonts'
+import { oswald } from '@/app/utils/fonts'
 import DesktopNav from './DesktopNav'
 import SocialLinks from './SocialLinks'
 import Link from 'next/link'
@@ -10,11 +10,15 @@ export default function Header({ settings }) {
         <header id="header" className="header">
             <Link
                 href={'/'}
-                className={`logo ${oswald.className}`}
+                className={`logo`}
                 title={'Développeur Front End '}
             >
-                <span className="name">{settings.header.name}</span>
-                <span className="pseudo">{settings.header.tagline}</span>
+                <span className={`${oswald.className} name`}>
+                    {settings.header.name}
+                </span>
+                <span className={`${oswald.className} pseudo`}>
+                    {settings.header.tagline}
+                </span>
             </Link>
             <a href="#" id="toggle-nav" className="toggle-nav">
                 <i className="fa-solid fa-plus"></i>

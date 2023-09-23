@@ -14,7 +14,7 @@ eventsList:
   - title: Webdesigner - intégrateur - graphiste
     startDate: 2005-06-25T22:00:00.000Z
     endDate: 2014-12-14T23:00:00.000Z
-    textDate: 200 - 2014
+    textDate: 2000 - 2014
     entreprise: Neteor
     place: Saint Victor la Coste
     description: >-
@@ -30,6 +30,7 @@ eventsList:
     place: 'Montrouge '
     description: 'Designer props: design d’objets pour dessin d’animation '
 ---
+
 
 
 

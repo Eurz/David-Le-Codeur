@@ -12,13 +12,6 @@ const pages = {
     format: 'md',
     ui: {
         router: ({ document }) => {
-            // if (document._sys.filename === 'accueil') {
-            //     return `/accueil`
-            // }
-            // if (document._sys.filename === 'parcours') {
-            //     return `/parcours`
-            // }
-
             return `${document._sys.filename}`
         },
         defaultItem: () => {

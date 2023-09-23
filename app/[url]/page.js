@@ -2,6 +2,8 @@ import { Blocks } from '@/components/blocks/Blocks'
 import Layout from '@/components/ui/Layout'
 import client from '@/tina/__generated__/client'
 
+import { access, constants } from 'node:fs'
+
 export async function generateMetadata({ params }) {
     const seoData = await client.queries.seoPage({
         relativePath: `${params.url}.md`,
@@ -15,9 +17,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-    const url = params.url
-    const isValidUrl = url !== 'mockServiceWorker.js'
-    const tinaProps = isValidUrl ? await getPages(url) : null
+    const filename = params.url
+    const tinaProps = await getPages(filename)
 
     return (
         <>
@@ -32,17 +33,31 @@ export async function getPages(filename) {
     const pagesResponse = await client.queries.page({
         relativePath: `${filename}.md`,
     })
+
     if (!pagesResponse) {
         notFound()
     }
     return pagesResponse
 }
 
-export async function generateStaticParams() {
-    const pagesResponse = await client.queries.pageConnection()
-    const pages = pagesResponse.data.pageConnection.edges.map((page) => {
-        return { url: page.node._sys.filename }
+// export async function generateStaticParams() {
+//     const pagesResponse = await client.queries.pageConnection()
+//     const pages = pagesResponse.data.pageConnection.edges.map((page) => {
+//         return { url: page.node._sys.filename }
+//     })
+
+//     return pages
+// }
+
+function fileExist(path) {
+    let response = true
+
+    access(path, constants.F_OK, (err) => {
+        if (err) {
+            response = false
+        }
+        // console.log(`${path} ${err ? 'does not exist' : 'exists'}`)
     })
 
-    return pages
+    return response
 }

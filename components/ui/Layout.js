@@ -1,6 +1,7 @@
 import client from '@/tina/__generated__/client'
 import Header from './Header'
 import { oswald, robotoCondensed } from '@/app/utils/fonts'
+import Head from 'next/head'
 
 export default async function Layout({ children, meta }) {
     const settings = await getSettings()
@@ -9,7 +10,7 @@ export default async function Layout({ children, meta }) {
         <>
             {/* <!DOCTYPE html> */}
             <html lang="fr">
-                <head>
+                <Head>
                     {/* <meta charset="UTF-8" /> */}
                     {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <meta
@@ -34,9 +35,9 @@ export default async function Layout({ children, meta }) {
                         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&family=Roboto+Condensed&family=Poppins&display=swap"
                         rel="stylesheet"
                     />
-                </head>
-                <body className={oswald.className}>
-                    <div className={`${robotoCondensed.className} container`}>
+                </Head>
+                <body className={robotoCondensed.className}>
+                    <div className={`container`}>
                         <Header settings={{ header, navigation }} />
 
                         <main className="content-wrapper">

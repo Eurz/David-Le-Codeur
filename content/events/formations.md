@@ -21,9 +21,11 @@ eventsList:
     textDate: 1998 - 2000
     entreprise: Université de l'Ile de la Réunion
   - title: Bac S
+    textDate: '1998'
     entreprise: Lycée Roland Garros
     place: Ile de la Réunion
 ---
+
 
 
 

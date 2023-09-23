@@ -14,15 +14,16 @@ import SingleImage from './SingleImage'
  * @returns
  */
 export function Blocks({ blocks }) {
-    if (blocks === null) {
-        return redirect('/accueil')
-    }
+    // if (blocks === null) {
+    //     return redirect('/accueil')
+    // }
 
     const { data } = useTina({
         data: blocks.data,
         query: blocks.query,
         variables: blocks.variables,
     })
+
     const { displayTitle, subtitle, title, isPublished, seo, ...test } =
         data.page
 
@@ -33,7 +34,7 @@ export function Blocks({ blocks }) {
             </div>
             {data.page.block
                 ? data.page.block.map((block, i) => {
-                      return <Block key={i} {...block} />
+                      return <Block key={`${block.title}-${i}`} {...block} />
                   })
                 : null}
         </>

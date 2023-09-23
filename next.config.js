@@ -3,14 +3,14 @@ const nextConfig = {
     // output: 'export',
     distDir: 'build',
     // basePath: '/projects/ecf',
-    async rewrites() {
-        return [
-            {
-                source: '/',
-                destination: '/accueil',
-            },
-        ]
-    },
+    // async rewrites() {
+    //     return [
+    //         {
+    //             source: '/',
+    //             destination: '/accueil',
+    //         },
+    //     ]
+    // },
     // async redirects() {
     //     return [
     //         {
@@ -22,12 +22,12 @@ const nextConfig = {
     // },
     images: {
         unoptimized: true,
-        // remotePatterns: [
-        //     {
-        //         protocol: 'https',
-        //         hostname: 'via.placeholder.com',
-        //     },
-        // ],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'assets.tina.io',
+            },
+        ],
         // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     },
 }
