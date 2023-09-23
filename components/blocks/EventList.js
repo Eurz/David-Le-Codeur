@@ -3,7 +3,7 @@ import { tinaField } from 'tinacms/dist/react'
 export default function EventList({ data }) {
     const { eventsList, title } = data.eventList ?? []
     return (
-        <div className="events">
+        <div className="events row">
             <h2 className="title-section">{title}</h2>
             {eventsList &&
                 eventsList.map((event, i) => {

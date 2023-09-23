@@ -3,12 +3,23 @@ import Layout from '@/components/ui/Layout'
 import client from '@/tina/__generated__/client'
 import { notFound } from 'next/navigation'
 
-export const metadata = { title: 'salut' }
+export async function generateMetadata({ params }) {
+    const seoData = await client.queries.seoPage({
+        relativePath: `${params.url}.md`,
+    })
+
+    const { seo } = seoData.data.page
+    return {
+        title: seo?.title || params.url,
+        description: seo?.description || params.url,
+    }
+}
 
 export default async function Page({ params }) {
     const url = params.url
     const isValidUrl = url !== 'mockServiceWorker.js'
     const tinaProps = isValidUrl ? await getPages(url) : null
+
     return (
         <>
             <Layout>
@@ -24,9 +35,7 @@ export async function getPages(filename) {
     })
     if (!pagesResponse) {
         notFound()
-        // return []
     }
-    // console.log(pagesResponse)
     return pagesResponse
 }
 

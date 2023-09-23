@@ -7,8 +7,7 @@ export default function HeroBanner({ data }) {
     const { image } = data
     const imageList = image?.map((item, i) => {
         const image =
-            item.src !== '' || null !== item.src ? item.src : '/pell-mell.svg'
-        console.log({ src: image })
+            item.src === '' || null === item.src ? '/pell-mell.svg' : item.src
         return (
             <div
                 key={`${item.name}${i}`}

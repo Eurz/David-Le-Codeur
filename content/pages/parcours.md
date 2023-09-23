@@ -1,13 +1,9 @@
 ---
-subtitle: Test
+subtitle: A propos
 title: Parcours
 isPublished: false
 displayTitle: true
 block:
-  - title: Banner
-    img: /uploads/Webdesign.jpg
-    textAlt: CV de David le codeur
-    _template: singleImage
   - title: Mon CV
     columnOne:
       - title: Simple content
@@ -32,7 +28,13 @@ block:
         _template: event
     _template: template2Cols
 post: ''
+seo:
+  title: 'Développeur Full Stack '
+  description: Développeur full stack dans le Gard
 ---
+
+
+
 
 
 

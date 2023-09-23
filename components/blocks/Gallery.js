@@ -10,15 +10,15 @@ export default function Gallery({ data }) {
         return (
             <div key={i} className="project pop-link activated">
                 <Image
-                    src={item?.item?.thumb}
+                    src={item?.item?.thumb || '/default-image.svg'}
                     width={640}
                     height={427}
                     alt=""
                     className="thumb"
                 />
                 <div className="project-description">
-                    <h3>{item?.item?.title}</h3>
-                    <p>{item?.item?.subtitle}</p>
+                    <h3>{item?.item?.title || 'title'}</h3>
+                    <p>{item?.item?.subtitle || 'subtitle'}</p>
                 </div>
 
                 {/* <div>{isPublished}</div> */}

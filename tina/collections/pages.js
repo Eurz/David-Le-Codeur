@@ -19,7 +19,7 @@ const pages = {
             //     return `/parcours`
             // }
 
-            return `${document._sys.filename}` || null
+            return `${document._sys.filename}`
         },
         defaultItem: () => {
             return {
@@ -53,14 +53,22 @@ const pages = {
             isTitle: true,
             required: true,
         },
+        {
+            name: 'seo',
+            label: 'Seo',
+            type: 'object',
+            fields: [
+                { name: 'title', label: 'Title', type: 'string' },
+                {
+                    name: 'description',
+                    label: 'Description',
+                    type: 'string',
+                    ui: { component: 'textarea' },
+                },
+            ],
+        },
         { type: 'boolean', label: 'Published', name: 'isPublished' },
         { type: 'boolean', label: 'Display title', name: 'displayTitle' },
-        {
-            name: 'post',
-            label: 'Posts',
-            type: 'reference',
-            collections: ['post'],
-        },
         {
             name: 'block',
             label: 'Sections',

@@ -38,26 +38,27 @@ h2 {
     font-size: 1.2em;
     margin-bottom: 0.5em;
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     /* margin-left: 0.8em; */
-    padding-inline: 0.8em;
+    /* padding-inline: 0.8em; */
+    /* padding-left: 0.8em; */
     line-height: 1.2em;
 }
 
-h2::after,
+/* h2::after,
 h2::before {
     opacity: 0.5;
     top: -0.1em;
     position: absolute;
 }
 h2::before {
-    content: '{';
+    content: '//';
     left: -0;
-}
-h2::after {
+} */
+/* h2::after {
     content: '}';
     right: 0;
-}
+} */
 p {
     line-height: 1.3em;
 }
@@ -147,8 +148,10 @@ hr {
     animation: transitionIn 1s;
 }
 
-.left .row {
+.left .row,
+.right .row {
     margin: 0;
+    flex: 1;
 }
 
 @keyframes transitionIn {
@@ -340,6 +343,7 @@ hr {
 }
 .title-h2 {
     font-size: 2em;
+    line-height: 1.8em;
 }
 .hero-wrapper {
     align-items: center;
@@ -401,8 +405,15 @@ hr {
 }
 .project-description {
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 1;
+    width: 80%;
+}
+
+.project-description p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .meteoapp-project {
     /* background-image: url('/img/projects/meteoapp.jpg'); */

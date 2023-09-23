@@ -2,7 +2,7 @@ export const heroBlockSchema = {
     name: 'hero',
     label: 'Hero banner',
     ui: {
-        previewSrc: 'https://via.placeholder.com/600/92c952',
+        // previewSrc: 'https://via.placeholder.com/600/92c952',
         defaultItem: {
             tagline: "Here's some text above the other text",
             headline: 'This Big Text is Totally Awesome',

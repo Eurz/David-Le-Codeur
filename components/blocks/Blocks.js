@@ -3,12 +3,17 @@ import { useTina, tinaField } from 'tinacms/dist/react'
 import HeroBanner from './HeroBanner'
 import SimpleContent from './SimpleContent'
 import PageTitle from '../ui/PageTitle'
-import { redirect } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import Gallery from './Gallery'
 import TemplateTwoCols from './TemplateTwoCols'
 import EventList from './EventList'
 import SingleImage from './SingleImage'
 
+/**
+ *
+ * @param {blocks} List of page's blocks
+ * @returns
+ */
 export function Blocks({ blocks }) {
     if (blocks === null) {
         return redirect('/accueil')
@@ -19,7 +24,9 @@ export function Blocks({ blocks }) {
         query: blocks.query,
         variables: blocks.variables,
     })
-    const { displayTitle, subtitle, title, isPublished, ...test } = data.page
+    const { displayTitle, subtitle, title, isPublished, seo, ...test } =
+        data.page
+
     return (
         <>
             <div data-tina-field={tinaField(data.page, 'title')}>
@@ -60,9 +67,6 @@ export const Block = (block) => {
         case 'PageBlockSingleImage': {
             return <SingleImage data={block} />
         }
-        // case 'PageBlockGallery': {
-        //     return <Galeries data={block} />
-        // }
         default:
             return null
     }

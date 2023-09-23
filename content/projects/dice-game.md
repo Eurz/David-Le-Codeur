@@ -1,6 +1,6 @@
 ---
 title: Dice game
-subtitle: Comment ne pas perdre la face
+subtitle: Jeu de dés en javascript
 thumb: /uploads/Projects/diceapp.jpg
 link: 'https://eurz.github.io/'
 isPublished: true

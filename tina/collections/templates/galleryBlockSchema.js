@@ -35,17 +35,14 @@ export const galleryBlockSchema = {
                     name: 'item',
                     label: 'ITEM',
                     type: 'reference',
-                    collections: ['project'],
+                    collections: ['project', 'event'],
                     ui: {
                         label: 'Projets disponibles',
                         description: 'Choisissez un projet dans la liste',
                         format: (value, name, field) => {
-                            // console.log({ value, name, field })
                             return
                         },
                         validate: (value, allValues, meta, field) => {
-                            // console.log({ value, allValues, meta, field })
-
                             if (value === undefined || value === '') {
                                 return 'Choose a project'
                             }

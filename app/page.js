@@ -10,6 +10,5 @@ export async function getPages() {
     const pagesResponse = await client.queries.page({
         relativePath: 'accueil.md',
     })
-    // console.log(pagesResponse)
     return pagesResponse
 }

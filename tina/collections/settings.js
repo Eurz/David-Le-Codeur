@@ -11,38 +11,58 @@ const settings = {
             required: true,
         },
         {
-            type: 'object',
             name: 'header',
-            label: 'Header',
+            label: 'Site identity',
+            type: 'object',
             fields: [
                 { name: 'name', label: 'Nom du site', type: 'string' },
                 { name: 'tagline', label: 'Slogan', type: 'string' },
                 { name: 'logo', label: 'Logo', type: 'image' },
                 { name: 'favicon', label: 'Favicon', type: 'image' },
+            ],
+        },
+        {
+            name: 'navigation',
+            label: 'Menus',
+            type: 'object',
+            fields: [
                 {
-                    type: 'object',
+                    name: 'links',
                     label: 'Nav Links',
-                    name: 'nav',
+                    type: 'object',
                     list: true,
                     ui: {
                         itemProps: (item) => {
                             return { label: item?.label }
                         },
                         defaultItem: {
-                            href: 'home',
-                            label: 'Home',
+                            href: '/',
+                            label: 'New link',
                         },
                     },
                     fields: [
                         {
-                            type: 'string',
-                            label: 'Link',
                             name: 'href',
+                            label: 'Link',
+                            type: 'string',
+                            // required: true,
                         },
                         {
-                            type: 'string',
-                            label: 'Label',
                             name: 'label',
+                            label: 'Label',
+                            type: 'string',
+                            required: true,
+                        },
+                        {
+                            name: 'linkTitle',
+                            label: 'Link title',
+                            type: 'string',
+                        },
+                        {
+                            name: 'page',
+                            label: 'Linked page',
+                            type: 'reference',
+                            collections: ['page'],
                         },
                     ],
                 },

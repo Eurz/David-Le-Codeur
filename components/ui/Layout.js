@@ -1,18 +1,17 @@
+import client from '@/tina/__generated__/client'
 import Header from './Header'
-import Footer from './Footer'
-import HeroBanner from '../blocks/HeroBanner'
 import { oswald, robotoCondensed } from '@/app/utils/fonts'
-import Image from 'next/image'
-import Head from 'next/head'
 
-export default function Layout({ children, meta }) {
+export default async function Layout({ children, meta }) {
+    const settings = await getSettings()
+    const { header, social, navigation, footer } = settings
     return (
         <>
             {/* <!DOCTYPE html> */}
             <html lang="fr">
                 <head>
-                    <meta charset="UTF-8" />
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                    {/* <meta charset="UTF-8" /> */}
+                    {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
@@ -20,7 +19,7 @@ export default function Layout({ children, meta }) {
                     <meta
                         name="description"
                         content="Je suis David, Développeur Front End, spécialisé dans la librairie React. Javascript est un langage de programmation incontournable pour apporter du dynamisme à vos pages web."
-                    />
+                    /> */}
                     <link rel="shortcut icon" href="./favicon.svg" />
                     <link
                         rel="preconnect"
@@ -38,7 +37,7 @@ export default function Layout({ children, meta }) {
                 </head>
                 <body className={oswald.className}>
                     <div className={`${robotoCondensed.className} container`}>
-                        <Header />
+                        <Header settings={{ header, navigation }} />
 
                         <main className="content-wrapper">
                             {children}
@@ -431,10 +430,17 @@ export default function Layout({ children, meta }) {
                                 <a className="up" href="#home"></a>
                             </div>
                         </main>
-                        <Footer />
+                        {/* <Footer /> */}
                     </div>
                 </body>
             </html>
         </>
     )
+}
+
+async function getSettings(params) {
+    const settings = await client.queries.setting({ relativePath: 'Global.md' })
+    const { header, social, navigation, footer } = settings.data.setting
+
+    return { header, navigation, social, footer }
 }

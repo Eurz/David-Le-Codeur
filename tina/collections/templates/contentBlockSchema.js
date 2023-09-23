@@ -2,7 +2,7 @@ export const contentBlockSchema = {
     name: 'simpleContent',
     label: 'Simple content',
     ui: {
-        // previewSrc: '/blocks/hero.png',
+        // previewSrc: 'https://via.placeholder.com/300/92c952',
         defaultItem: {
             title: 'Simple contents',
             featured: false,

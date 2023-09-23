@@ -16,7 +16,7 @@ export default function TemplateTwoCols({ data }) {
                 })}
             </div>
             <div className="right">
-                {data.columnTwo.map((block, i) => {
+                {data.columnTwo?.map((block, i) => {
                     return (
                         <>
                             <Fragment key={`${block.__typename}-${i}-${i}`}>
