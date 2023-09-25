@@ -4,6 +4,9 @@ subtitle: Jeu de dés en javascript
 thumb: /uploads/Projects/diceapp.jpg
 link: 'https://eurz.github.io/'
 isPublished: true
+stack:
+  - Tina Cms
+  - Next.js
 ---
 
 Le jeu Dice Game comprend 2 joueurs sur un seul et même écran.

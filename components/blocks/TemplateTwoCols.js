@@ -9,7 +9,7 @@ export default function TemplateTwoCols({ data }) {
                 {/* <Blocks blocks={data.colunOne} /> */}
                 {data.columnOne?.map((block, i) => {
                     return (
-                        <Fragment key={`${block.__typename}-${i}`}>
+                        <Fragment key={`${block.title}-${i}`}>
                             <Block {...block} />
                         </Fragment>
                     )
@@ -19,7 +19,7 @@ export default function TemplateTwoCols({ data }) {
                 {data.columnTwo?.map((block, i) => {
                     return (
                         <>
-                            <Fragment key={`${block.__typename}-${i}-${i}`}>
+                            <Fragment key={`${block.title}-${i}-${i}`}>
                                 <Block {...block} />
                             </Fragment>
                         </>

@@ -16,6 +16,8 @@ navigation:
     - href: /projets
       label: Projets
       page: content/pages/projets.md
+    - href: /posts
+      label: Blog
     - href: ''
       label: Contact
       page: content/pages/contact.md

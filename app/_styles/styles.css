@@ -144,7 +144,7 @@ hr {
 }
 
 .row {
-    margin: 20px 40px 50px 40px;
+    padding: 20px 40px 50px 40px;
     animation: transitionIn 1s;
 }
 
@@ -368,8 +368,8 @@ hr {
 /*******************/
 .projects-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .project {
     width: calc(33% - 10px);
@@ -788,7 +788,7 @@ h1 > span,
     text-orientation: mixed;
     font-size: 0.85em;
     padding: 0.5em 0;
-    left: -36px;
+    left: -0.4em;
     bottom: 50%;
     margin-bottom: -50px;
 }
@@ -834,6 +834,10 @@ h1 > span,
     .text-infos {
         width: auto;
     }
+    .project {
+        width: calc(50% - 10px);
+        /* margin: 5px; */
+    }
 }
 @media screen and (max-width: 992px) {
     body {
@@ -844,7 +848,7 @@ h1 > span,
     }
 
     .row {
-        margin: 20px 30px 20px 30px;
+        padding: 20px 30px 20px 30px;
     }
     .main,
     .apps,
@@ -938,7 +942,7 @@ h1 > span,
         display: inline-block;
     }
     .scroll {
-        left: -24px;
+        left: 0.4em;
     }
 }
 @media screen and (max-width: 768px) {

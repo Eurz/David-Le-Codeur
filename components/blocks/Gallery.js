@@ -1,30 +1,17 @@
-import Image from 'next/image'
-import React from 'react'
+'use client'
+import { useRef } from 'react'
+import GalleryItem from '../projects/GalleryItem'
 
 export default function Gallery({ data }) {
+    const galleryRef = useRef(null)
     if (data.gallery === null) {
-        return <div></div>
+        return <div>Pas de projets pour le moment</div>
     }
+    const galleriesList = data.gallery.map((gallery, i) => {
 
-    const galleriesList = data.gallery.map((item, i) => {
-        return (
-            <div key={i} className="project pop-link activated">
-                <Image
-                    src={item?.item?.thumb || '/default-image.svg'}
-                    width={640}
-                    height={427}
-                    alt=""
-                    className="thumb"
-                />
-                <div className="project-description">
-                    <h3>{item?.item?.title || 'title'}</h3>
-                    <p>{item?.item?.subtitle || 'subtitle'}</p>
-                </div>
-
-                {/* <div>{isPublished}</div> */}
-            </div>
-        )
+        return <GalleryItem ref={galleryRef} key={i} gallery={gallery} />
     })
+    
     return (
         <section className="projects row" id="projects">
             <div className="row-section">

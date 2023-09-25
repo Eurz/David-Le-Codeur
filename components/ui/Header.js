@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks'
 import Link from 'next/link'
 
 export default function Header({ settings }) {
-    const navLinks = settings.navigation
+    const { navLinks } = getNav()
 
     return (
         <header id="header" className="header">
@@ -27,4 +27,36 @@ export default function Header({ settings }) {
             <SocialLinks />
         </header>
     )
+}
+
+function getNav() {
+    const navLinks = [
+        {
+            href: '/accueil',
+            label: 'Accueil',
+            linkTitle: '',
+        },
+        {
+            href: '/parcours',
+            label: 'Parcours',
+            linkTitle: null,
+        },
+        {
+            href: '/projets',
+            label: 'Projets',
+            linkTitle: 'Application javascript & php',
+        },
+        {
+            href: '/posts',
+            label: 'Blog',
+            linkTitle: 'Blog de David le codeur',
+        },
+        {
+            href: '/contact',
+            label: 'Contact',
+            linkTitle: 'Me contacter',
+        },
+    ]
+
+    return { navLinks }
 }

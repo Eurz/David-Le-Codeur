@@ -29,9 +29,7 @@ export function Blocks({ blocks }) {
 
     return (
         <>
-            <div data-tina-field={tinaField(data.page, 'title')}>
                 <PageTitle data={{ displayTitle, subtitle, title }} />
-            </div>
             {data.page.block
                 ? data.page.block.map((block, i) => {
                       return <Block key={`${block.title}-${i}`} {...block} />

@@ -8,10 +8,8 @@ export default function page() {
         displayTitle: true,
     }
     return (
-        <Layout>
-            <PageTitle data={data}>
-                <h1></h1>
-            </PageTitle>
-        </Layout>
+        <PageTitle data={data}>
+            <h1></h1>
+        </PageTitle>
     )
 }

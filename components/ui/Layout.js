@@ -21,10 +21,15 @@ export default async function Layout({ children, meta }) {
                         name="description"
                         content="Je suis David, Développeur Front End, spécialisé dans la librairie React. Javascript est un langage de programmation incontournable pour apporter du dynamisme à vos pages web."
                     /> */}
-                    <link rel="shortcut icon" href="./favicon.svg" />
+                    {/* <link rel="shortcut icon" href="./favicon.svg" />
                     <link
                         rel="preconnect"
                         href="https://fonts.googleapis.com"
+                    />
+                */}
+                    {/* <link
+                        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&family=Roboto+Condensed&family=Poppins&display=swap"
+                        rel="stylesheet"
                     />
                     <link
                         rel="preconnect"
@@ -32,9 +37,12 @@ export default async function Layout({ children, meta }) {
                         crossorigin
                     />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&family=Roboto+Condensed&family=Poppins&display=swap"
                         rel="stylesheet"
-                    />
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+                        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+                        crossorigin="anonymous"
+                        referrerpolicy="no-referrer"
+                    /> */}
                 </Head>
                 <body className={robotoCondensed.className}>
                     <div className={`container`}>

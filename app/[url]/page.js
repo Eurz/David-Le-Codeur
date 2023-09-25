@@ -1,8 +1,10 @@
 import { Blocks } from '@/components/blocks/Blocks'
 import Layout from '@/components/ui/Layout'
 import client from '@/tina/__generated__/client'
+import { notFound } from 'next/navigation'
 
 import { access, constants } from 'node:fs'
+import { Suspense } from 'react'
 
 export async function generateMetadata({ params }) {
     const seoData = await client.queries.seoPage({
@@ -19,12 +21,11 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
     const filename = params.url
     const tinaProps = await getPages(filename)
-
     return (
         <>
-            <Layout>
+            <Suspense fallback={<div>Loading dfd sf fez fe </div>}>
                 <Blocks blocks={tinaProps} />
-            </Layout>
+            </Suspense>
         </>
     )
 }
@@ -34,9 +35,9 @@ export async function getPages(filename) {
         relativePath: `${filename}.md`,
     })
 
-    if (!pagesResponse) {
-        notFound()
-    }
+    // if (!pagesResponse) {
+    //     notFound()
+    // }
     return pagesResponse
 }
 
@@ -56,7 +57,6 @@ function fileExist(path) {
         if (err) {
             response = false
         }
-        // console.log(`${path} ${err ? 'does not exist' : 'exists'}`)
     })
 
     return response

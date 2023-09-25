@@ -6,6 +6,8 @@ displayTitle: true
 block:
   - title: Galerie de projets
     gallery:
+      - title: Quizz Game
+        item: content/projects/quizz-game.md
       - title: Memory card game
         item: content/projects/memory-card-game.md
       - title: Application météo
@@ -16,6 +18,7 @@ block:
 seo:
   title: Développeur javascript et php
 ---
+
 
 
 

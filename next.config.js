@@ -3,14 +3,18 @@ const nextConfig = {
     // output: 'export',
     distDir: 'build',
     // basePath: '/projects/ecf',
-    // async rewrites() {
-    //     return [
-    //         {
-    //             source: '/',
-    //             destination: '/accueil',
-    //         },
-    //     ]
-    // },
+    async rewrites() {
+        return [
+            {
+                source: '/',
+                destination: '/accueil',
+            },
+            {
+                source: '/admin',
+                destination: '/admin/index.html',
+            },
+        ]
+    },
     // async redirects() {
     //     return [
     //         {

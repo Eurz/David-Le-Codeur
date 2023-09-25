@@ -4,10 +4,11 @@ import { usePathname } from 'next/navigation'
 
 export default function DesktopNav({ data }) {
     const pathname = usePathname()
-    const links = data.links?.map((link, i) => {
+    const links = data?.map((link, i) => {
         const pageLink =
             link.href !== '' ? link.href : `/${link.page?._sys.filename}`
         const isActive = pathname === pageLink
+
 
         return (
             <Link

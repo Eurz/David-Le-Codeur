@@ -38,6 +38,7 @@ const settings = {
                         defaultItem: {
                             href: '/',
                             label: 'New link',
+                            page: '',
                         },
                     },
                     fields: [
