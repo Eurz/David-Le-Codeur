@@ -6,7 +6,6 @@ export default async function projectsDetailPage({ params }) {
     const data = await client.queries.project({
         relativePath: `${params.slug}.md`,
     })
-    console.log(data.data.project)
     return (
         <PageTitle
             data={{

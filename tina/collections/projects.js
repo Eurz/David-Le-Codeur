@@ -1,3 +1,4 @@
+import client from '../__generated__/client'
 const projects = {
     name: 'project',
     label: 'Projects',
@@ -27,6 +28,7 @@ const projects = {
             isTitle: true,
             required: true,
         },
+
         {
             name: 'subtitle',
             type: 'string',
@@ -45,7 +47,42 @@ const projects = {
             label: 'Body',
             isBody: true,
         },
-        { name: 'stack', label: 'Stack', type: 'string', list: true },
+        // { name: 'stack', label: 'Stack', type: 'string', list: true },
+        {
+            type: 'string',
+            name: 'stack',
+            label: 'Stack',
+            description: 'Tags for this project',
+            list: true,
+            ui: {
+                component: 'tags',
+            },
+        },
     ],
 }
 export default projects
+// Test
+async function getTags() {
+    const data = await client.request({
+        query: `query queryTags($relativePath: String!) {
+            setting(relativePath: $relativePath) {
+              ... on Document {
+                ... on Setting {
+                  posts {
+                    tags
+                  }
+                }
+              }
+            }
+          }`,
+        variables: {
+            relativePath: 'Global.md',
+        },
+    })
+
+    const tags = data.data.setting.posts.tags.map((tag) => {
+        return { value: tag.toLowerCase(), label: tag }
+    })
+    console.log(tags)
+    return tags
+}

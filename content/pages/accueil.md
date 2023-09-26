@@ -28,13 +28,10 @@ block:
       - src: /uploads/Hero/symfony.jpg
         name: Symfony
     _template: hero
-isPublished: false
-displayTitle: false
+isPublished: true
+displayTitle: true
 seo:
   title: Page d'accueil
   description: Description de l'accueil
 ---
-
-
-
 

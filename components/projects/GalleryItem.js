@@ -1,32 +1,26 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
 
-export default function GalleryItem({ gallery }) {
-    const [clicked, setClicked] = useState(false)
-    const handleClick = () => {
-        setClicked((v) => !v)
-    }
+export default function GalleryItem({ gallery, handleClick }) {
+    const { id, thumb, title, subtitle, ...details } = gallery.item
     return (
         <>
-            <div className="project pop-link activated">
+            <div
+                className="project pop-link activated"
+                onClick={() => handleClick({ ...details, title })}
+            >
                 <Image
-                    src={gallery?.item?.thumb || '/default-image.svg'}
+                    src={thumb || '/default-image.svg'}
                     width={600}
                     height={247}
-                    alt={`${gallery?.item?.title}`}
+                    alt={`${title}`}
                     // className="thumb"
                 />
                 <div className="project-description">
-                    <h3>{gallery?.item?.title || 'title'}</h3>
-                    <p>{gallery?.item?.subtitle || 'subtitle'}</p>
+                    <h3>{title ?? ''}</h3>
+                    <p>{subtitle ?? ''}</p>
                 </div>
-
-                {/* <div>{isPublished}</div> */}
             </div>
-
-            {clicked && <div>djshdkshkds</div>}
         </>
     )
 }

@@ -75,33 +75,50 @@ const settings = {
             name: 'social',
             fields: [
                 {
-                    type: 'string',
-                    label: 'Facebook',
                     name: 'facebook',
+                    label: 'Facebook',
+                    type: 'string',
                 },
                 {
-                    type: 'string',
-                    label: 'Twitter',
                     name: 'twitter',
+                    label: 'Twitter',
+                    type: 'string',
                 },
                 {
-                    type: 'string',
-                    label: 'Instagram',
                     name: 'instagram',
+                    label: 'Instagram',
+                    type: 'string',
                 },
                 {
-                    type: 'string',
-                    label: 'Github',
                     name: 'github',
+                    label: 'Github',
+                    type: 'string',
                 },
             ],
         },
 
         {
-            type: 'object',
             name: 'footer',
             label: 'Footer',
+            type: 'object',
             fields: [{ name: 'copyright', label: 'Copyright', type: 'string' }],
+        },
+        {
+            name: 'posts',
+            label: 'Post',
+            type: 'object',
+            fields: [
+                {
+                    type: 'string',
+                    name: 'tags',
+                    label: 'Tags',
+                    description: 'Tags for this post',
+                    list: true,
+                    ui: {
+                        component: 'tags',
+                    },
+                },
+            ],
         },
     ],
 }

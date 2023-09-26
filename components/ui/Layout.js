@@ -6,6 +6,7 @@ import Head from 'next/head'
 export default async function Layout({ children, meta }) {
     const settings = await getSettings()
     const { header, social, navigation, footer } = settings
+
     return (
         <>
             {/* <!DOCTYPE html> */}
@@ -449,7 +450,8 @@ export default async function Layout({ children, meta }) {
 
 async function getSettings(params) {
     const settings = await client.queries.setting({ relativePath: 'Global.md' })
-    const { header, social, navigation, footer } = settings.data.setting
 
-    return { header, navigation, social, footer }
+    const { header, social, navigation, footer, posts } = settings.data.setting
+
+    return { header, navigation, social, footer, posts }
 }

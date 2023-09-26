@@ -30,6 +30,13 @@ const pages = {
                 )
             },
         },
+        beforeSubmit: async ({ form, cms, values }) => {
+            console.log({ form })
+            return {
+                ...values,
+                lastUpdated: new Date().toISOString(),
+            }
+        },
     },
     fields: [
         {

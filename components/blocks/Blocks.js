@@ -29,7 +29,8 @@ export function Blocks({ blocks }) {
 
     return (
         <>
-                <PageTitle data={{ displayTitle, subtitle, title }} />
+            <PageTitle data={{ displayTitle, subtitle, title }} />
+
             {data.page.block
                 ? data.page.block.map((block, i) => {
                       return <Block key={`${block.title}-${i}`} {...block} />
