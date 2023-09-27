@@ -2,6 +2,7 @@ import { oswald } from '@/app/utils/fonts'
 import DesktopNav from './DesktopNav'
 import SocialLinks from './SocialLinks'
 import Link from 'next/link'
+import NavBar from './NavBar'
 
 export default function Header({ settings }) {
     const { navLinks } = getNav()
@@ -20,11 +21,9 @@ export default function Header({ settings }) {
                     {settings.header.tagline}
                 </span>
             </Link>
-            <a href="#" id="toggle-nav" className="toggle-nav">
-                <i className="fa-solid fa-plus"></i>
-            </a>
-            
-            <DesktopNav data={navLinks} />
+
+            {/* <DesktopNav data={navLinks} /> */}
+            <NavBar navLinks={navLinks} />
             <SocialLinks />
         </header>
     )
