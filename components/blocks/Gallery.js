@@ -41,18 +41,20 @@ export default function Gallery({ data }) {
             {clicked && (
                 <Modal title={details.title} onClose={handleClose}>
                     <TinaMarkdown content={details.body} />
-                    <div className="btn-groups">
-                        <Link
-                            href={`${details.link}`}
-                            target="_blank"
-                            className="btn btn-small"
-                        >
-                            <i className="fa-solid fa-right-to-bracket">
-                                {'>'}
-                            </i>
-                            Voir l'application
-                        </Link>
-                    </div>
+                    {details.link && (
+                        <div className="btn-groups">
+                            <Link
+                                href={`${details.link}`}
+                                target="_blank"
+                                className="btn btn-small"
+                            >
+                                <i className="fa-solid fa-right-to-bracket">
+                                    {'>'}
+                                </i>
+                                Voir l'application
+                            </Link>
+                        </div>
+                    )}
                     <TagsList tags={details.stack} />
                 </Modal>
             )}

@@ -1,8 +1,3 @@
-// import { contentBlockSchema } from './templates/contentBlockSchema'
-// import { galleryBlockSchema } from './templates/galleryBlockSchema'
-// import { heroBlockSchema } from './templates/heroBlockSchema'
-// import { template2ColsBlockSchema } from './templates/template2ColsBlockSchema'
-// import { eventBlockSchema } from './templates/eventBlockSchema'
 import templates from './templates'
 
 const pages = {
@@ -40,18 +35,51 @@ const pages = {
     },
     fields: [
         {
-            name: 'subtitle',
-            label: 'Subtitle',
-            type: 'string',
-        },
-        {
             type: 'string',
             label: 'Title',
             name: 'title',
             description:
                 'The title of the page. This is used to display the title in the CMS',
+            placeholder: 'Page title',
             isTitle: true,
             required: true,
+        },
+        {
+            name: 'subtitle',
+            label: 'On title',
+            type: 'string',
+        },
+
+        {
+            name: 'isPublished',
+            label: 'Published',
+            type: 'boolean',
+            ui: { component: 'toggle' },
+            toggleLabels: {
+                true: 'On',
+                false: 'Off',
+            },
+        },
+        {
+            name: 'displayTitle',
+            label: 'Display title',
+            type: 'boolean',
+            ui: { component: 'toggle' },
+            toggleLabels: {
+                true: 'On',
+                false: 'Off',
+            },
+        },
+
+        {
+            name: 'block',
+            label: 'Sections',
+            type: 'object',
+            list: true,
+            ui: {
+                visualSelector: true,
+            },
+            templates: templates,
         },
         {
             name: 'seo',
@@ -66,18 +94,6 @@ const pages = {
                     ui: { component: 'textarea' },
                 },
             ],
-        },
-        { type: 'boolean', label: 'Published', name: 'isPublished' },
-        { type: 'boolean', label: 'Display title', name: 'displayTitle' },
-        {
-            name: 'block',
-            label: 'Sections',
-            type: 'object',
-            list: true,
-            ui: {
-                visualSelector: true,
-            },
-            templates: templates,
         },
     ],
 }

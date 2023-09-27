@@ -47,7 +47,6 @@ const projects = {
             label: 'Body',
             isBody: true,
         },
-        // { name: 'stack', label: 'Stack', type: 'string', list: true },
         {
             type: 'string',
             name: 'stack',

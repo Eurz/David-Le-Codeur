@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
     const filename = params.url
     const tinaProps = await getPages(filename)
+    console.log(tinaProps.data.page)
     return (
         <>
             <Suspense fallback={<div>Loading dfd sf fez fe </div>}>

@@ -23,6 +23,7 @@ export default function Header({ settings }) {
             <a href="#" id="toggle-nav" className="toggle-nav">
                 <i className="fa-solid fa-plus"></i>
             </a>
+            
             <DesktopNav data={navLinks} />
             <SocialLinks />
         </header>
