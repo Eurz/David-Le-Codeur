@@ -17,7 +17,6 @@ export default function HeroBanner({ data }) {
                 }}
                 data-tina-field={tinaField(item, 'name')}
             >
-                {/* <Image src={item.src} width={200} height={200} alt='eee' */}
                 <div className="name-overlay">
                     <div className="hero-name">{item.name}</div>
                 </div>
@@ -56,7 +55,15 @@ export default function HeroBanner({ data }) {
                 </div>
                 <div className="scroll">
                     Soyez curieux
-                    <i className="fa-solid fa-hand-point-right"></i>
+                    {/* <i className="fa-solid fa-hand-point-right"></i> */}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                    >
+                        <path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg>
                 </div>
             </section>
         </>

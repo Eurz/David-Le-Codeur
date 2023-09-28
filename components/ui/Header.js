@@ -1,5 +1,4 @@
 import { oswald } from '@/app/utils/fonts'
-import DesktopNav from './DesktopNav'
 import SocialLinks from './SocialLinks'
 import Link from 'next/link'
 import NavBar from './NavBar'
@@ -11,20 +10,15 @@ export default function Header({ settings }) {
         <header id="header" className="header">
             <Link
                 href={'/'}
-                className={`logo`}
+                className={`${oswald.className} logo`}
                 title={'Développeur Front End '}
             >
-                <span className={`${oswald.className} name`}>
-                    {settings.header.name}
-                </span>
-                <span className={`${oswald.className} pseudo`}>
-                    {settings.header.tagline}
-                </span>
+                <span className={`name`}>{settings.header.name}</span>
+                <span className={`pseudo`}>{settings.header.tagline}</span>
             </Link>
-
             {/* <DesktopNav data={navLinks} /> */}
             <NavBar navLinks={navLinks} />
-            <SocialLinks />
+            <SocialLinks data={settings.social} />
         </header>
     )
 }

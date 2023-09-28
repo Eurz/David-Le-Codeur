@@ -1,24 +1,28 @@
-export default function SocialLinks() {
+export default function SocialLinks({ data }) {
+    console.log({ data })
+
+    // for (const key in Object.entries(data)) {
+    //     if (Object.hasOwnProperty.call(object, key)) {
+    //         const element = object[key]
+    //     }
+    // }
     return (
         <div className="socials" role="menubar">
-            <a
-                href="https://github.com/Eurz"
-                target="_blank"
-                role="menuitem"
-                className="tooltip"
-            >
-                <span className="tooltiptext">GitHub</span>
-                <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/david-blard/"
-                target="_blank"
-                role="menuitem"
-                className="tooltip"
-            >
-                <span className="tooltiptext">Linkedin</span>
-                <i className="fa-brands fa-linkedin"></i>
-            </a>
+            {/* {data?.map((item) => {
+                return (
+                    <>
+                        <a
+                            href={item}
+                            target="_blank"
+                            role="menuitem"
+                            className="tooltip"
+                        >
+                            <span className="tooltiptext">GitHub</span>
+                            <i className="fa-brands fa-github"></i>
+                        </a>
+                    </>
+                )
+            })} */}
         </div>
     )
 }

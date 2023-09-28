@@ -33,7 +33,9 @@ export function Blocks({ blocks }) {
 
             {data.page.block
                 ? data.page.block.map((block, i) => {
-                      return <Block key={`${block.title}-${i}`} {...block} />
+                      return (
+                          <Block key={`${block.__typename}-${i}`} {...block} />
+                      )
                   })
                 : null}
         </>

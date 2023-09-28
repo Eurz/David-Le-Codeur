@@ -80,8 +80,8 @@ const settings = {
                     type: 'string',
                 },
                 {
-                    name: 'twitter',
-                    label: 'Twitter',
+                    name: 'linkedin',
+                    label: 'Linkedin',
                     type: 'string',
                 },
                 {

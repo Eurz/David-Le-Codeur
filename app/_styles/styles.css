@@ -902,6 +902,9 @@ h1 > span,
 
     .toggle-nav {
         display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
     }
     .nav-main {
         position: fixed;
@@ -910,16 +913,17 @@ h1 > span,
         top: var(--nav-height);
         left: 0;
         background-color: var(--first-color);
-        opacity: 0;
-        transition: transform 0.5s ease 0s, opacity 0.5s;
-        transform: translateY(-100%);
+        /* opacity: 0; */
+        /* transition: transform 0.5s ease 0s, opacity 0.5s; */
+        /* transform: translateY(-100%); */
         display: flex;
         justify-content: flex-start;
     }
     .mobile-nav {
-        transform: translateY(0);
-        opacity: 1;
-        transition: transform 0.5s ease 0s, opacity 0.5s;
+        /* transform: translateY(0);
+        transition: transform 0.5s ease 0s, opacity 0.5s; */
+        /* opacity: 1; */
+        /* animation: transitionIn 0.3s; */
         display: flex;
     }
 
@@ -1083,26 +1087,7 @@ h1 > span,
 .btn-groups {
     margin-bottom: 1em;
 }
-/******  LOADER  ******/
-.loader {
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    /* height: 0; */
-    /* position: fixed; */
-    /* display: flex; */
-    left: 0;
-    transition: all 2s ease 0s;
-    top: 0;
-    height: 100vh;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.loader div {
-    background-color: #fff;
-}
+
 /****** DAMIER  ********/
 /************/
 #damier {
@@ -1127,4 +1112,43 @@ h1 > span,
     font-size: 1rem;
     transition: opacity 0.5s, transform 0.5s;
     /* pointer-events: none; */
+}
+
+/* LOADER */
+.w-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 999;
+}
+
+.w-loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.w-loader::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    border: 15px solid #fff;
+    border-top-color: var(--bgmain-color);
+    border-radius: 50%;
+    animation: loading 0.95s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
 }
