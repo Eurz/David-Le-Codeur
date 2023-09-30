@@ -1,5 +1,7 @@
 'use client'
+import { oswald } from '@/app/utils/fonts'
 import Image from 'next/image'
+import { tinaField } from 'tinacms/dist/react'
 
 export default function GalleryItem({ gallery, handleClick }) {
     const { id, thumb, title, subtitle, ...details } = gallery.item
@@ -8,6 +10,7 @@ export default function GalleryItem({ gallery, handleClick }) {
             <div
                 className="project pop-link activated"
                 onClick={() => handleClick({ ...details, title })}
+                data-tina-field={tinaField(gallery.item, 'title')}
             >
                 <Image
                     src={thumb || '/default-image.svg'}
@@ -17,7 +20,7 @@ export default function GalleryItem({ gallery, handleClick }) {
                     // className="thumb"
                 />
                 <div className="project-description">
-                    <h3>{title ?? ''}</h3>
+                    <h3 className={`${oswald.className}`}>{title ?? ''}</h3>
                     <p>{subtitle ?? ''}</p>
                 </div>
             </div>

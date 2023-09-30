@@ -1,6 +1,4 @@
 export default function SocialLinks({ data }) {
-    console.log({ data })
-
     // for (const key in Object.entries(data)) {
     //     if (Object.hasOwnProperty.call(object, key)) {
     //         const element = object[key]

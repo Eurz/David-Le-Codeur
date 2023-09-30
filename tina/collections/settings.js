@@ -2,6 +2,13 @@ const settings = {
     name: 'setting',
     label: 'Settings',
     path: 'content/settings',
+    ui: {
+        allowedActions: {
+            create: false,
+            delete: false,
+        },
+        global: true,
+    },
     fields: [
         {
             type: 'string',

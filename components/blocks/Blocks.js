@@ -26,10 +26,11 @@ export function Blocks({ blocks }) {
 
     const { displayTitle, subtitle, title, isPublished, seo, ...test } =
         data.page
-
     return (
         <>
-            <PageTitle data={{ displayTitle, subtitle, title }} />
+            <div data-tina-field={tinaField(data.page, 'title')}>
+                <PageTitle data={{ displayTitle, subtitle, title }} />
+            </div>
 
             {data.page.block
                 ? data.page.block.map((block, i) => {

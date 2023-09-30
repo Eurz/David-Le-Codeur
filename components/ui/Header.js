@@ -26,7 +26,7 @@ export default function Header({ settings }) {
 function getNav() {
     const navLinks = [
         {
-            href: '/accueil',
+            href: '/',
             label: 'Accueil',
             linkTitle: '',
         },

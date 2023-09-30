@@ -82,6 +82,5 @@ async function getTags() {
     const tags = data.data.setting.posts.tags.map((tag) => {
         return { value: tag.toLowerCase(), label: tag }
     })
-    console.log(tags)
     return tags
 }

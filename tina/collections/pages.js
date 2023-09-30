@@ -26,7 +26,6 @@ const pages = {
             },
         },
         beforeSubmit: async ({ form, cms, values }) => {
-            console.log({ form })
             return {
                 ...values,
                 lastUpdated: new Date().toISOString(),
@@ -54,6 +53,7 @@ const pages = {
             name: 'isPublished',
             label: 'Published',
             type: 'boolean',
+            // inline: true,
             ui: { component: 'toggle' },
             toggleLabels: {
                 true: 'On',

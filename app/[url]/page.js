@@ -1,10 +1,7 @@
 import { Blocks } from '@/components/blocks/Blocks'
-import Layout from '@/components/ui/Layout'
 import client from '@/tina/__generated__/client'
-import { notFound } from 'next/navigation'
 
 import { access, constants } from 'node:fs'
-import { Suspense } from 'react'
 
 export async function generateMetadata({ params }) {
     const seoData = await client.queries.seoPage({
@@ -21,12 +18,9 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
     const filename = params.url
     const tinaProps = await getPages(filename)
-    console.log(tinaProps.data.page)
     return (
         <>
-            <Suspense fallback={<div>Loading dfd sf fez fe </div>}>
-                <Blocks blocks={tinaProps} />
-            </Suspense>
+            <Blocks blocks={tinaProps} />
         </>
     )
 }

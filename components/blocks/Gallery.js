@@ -7,6 +7,7 @@ import TagsList from '../projects/TagsList'
 import Modal from '@/components/modals/Modal'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
 import Link from 'next/link'
+import { oswald } from '@/app/utils/fonts'
 
 export default function Gallery({ data }) {
     if (data.gallery === null) {
@@ -34,7 +35,7 @@ export default function Gallery({ data }) {
         <>
             <section className="projects row" id="projects">
                 <div className="row-section">
-                    <h2>{data.title}</h2>
+                    <h2 className={`${oswald.className}`}>{data.title}</h2>
                     <div className="projects-list">{galleriesList}</div>
                 </div>
             </section>

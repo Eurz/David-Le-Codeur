@@ -1,6 +1,6 @@
 import client from '@/tina/__generated__/client'
 import Header from './Header'
-import { oswald, robotoCondensed } from '@/app/utils/fonts'
+import { robotoCondensed } from '@/app/utils/fonts'
 import Head from 'next/head'
 
 export default async function Layout({ children, meta }) {

@@ -2,6 +2,7 @@
 const nextConfig = {
     // output: 'export',
     distDir: 'build',
+
     // basePath: '/projects/ecf',
     async rewrites() {
         return [

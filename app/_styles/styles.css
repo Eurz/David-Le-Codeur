@@ -1,3 +1,4 @@
+@import url('./reset.css');
 html {
     scroll-behavior: smooth;
 }
@@ -24,6 +25,8 @@ h1 {
     /* margin-bottom: 20px; */
     font-weight: 200;
     font-size: 2em;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--light-grey);
 }
 /* h2 {
     font-size: 1.5rem;
@@ -420,18 +423,53 @@ hr {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.meteoapp-project {
-    /* background-image: url('/img/projects/meteoapp.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.dicegame-project {
-    /* background-image: url('/img/projects/diceapp.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
+/* POSTS */
+.posts-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
+.posts-list .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 2rem;
+}
+.posts-list .post {
+    margin-bottom: 20px;
+}
+.posts-list .post:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+}
+.posts-list .btn {
+    margin-top: 15px;
+}
+.posts-list a {
+    color: inherit;
+}
+
+.single-post .description {
+    padding: 1.5em;
+}
+.single-post .thumb {
+    margin: 0;
+}
+.post-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--light-grey);
+}
+.post-header .thumb {
+    order: 1;
+}
 /* Tags list */
+.tags {
+    text-align: right;
+    margin-bottom: 1em;
+}
 .tags .item {
     display: inline-block;
     font-size: 0.7em;
@@ -530,7 +568,7 @@ hr {
 }
 
 /**/
-.description {
+.events .description {
     padding: 15px 10px;
 }
 .promote {
@@ -690,26 +728,6 @@ h1 > span,
     height: 100%;
 }
 
-.hero1 {
-    /* background: url(../img/bionic.jpg) no-repeat center center; */
-    background-size: cover;
-}
-.hero2 {
-    /* background: url(../img/hippie.jpg) no-repeat center center; */
-    background-size: cover;
-}
-.hero3 {
-    /* background: url(../img/vanilla.jpg) no-repeat center center; */
-    background-size: cover;
-}
-.hero4 {
-    /* background: url(../img/boxeuse.jpg) no-repeat center center; */
-    background-size: cover;
-}
-.hero5 {
-    /* background: url(../img/symfony.jpg) no-repeat center center; */
-    background-size: cover;
-}
 .inprogress {
     opacity: 0.5;
 }
@@ -856,6 +874,20 @@ h1 > span,
         width: calc(50% - 10px);
         /* margin: 5px; */
     }
+    .posts-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .post-header {
+        display: grid;
+        grid-template-columns: auto;
+        /* background-color: var(--light-grey); */
+    }
+    .post-header .thumb {
+        order: 0;
+    }
 }
 @media screen and (max-width: 992px) {
     body {
@@ -966,6 +998,18 @@ h1 > span,
     .scroll {
         left: 0.4em;
     }
+    .posts-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-header {
+        /* display: grid; */
+        grid-template-columns: auto;
+        background-color: var(--light-grey);
+    }
+    .post-header .thumb {
+        order: 0;
+    }
 }
 @media screen and (max-width: 768px) {
     h1 > span,
@@ -990,12 +1034,20 @@ h1 > span,
         width: calc(50% - 10px);
         margin: 5px;
     }
+    .posts-list {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .project {
         width: calc(100%);
         margin: 0 0 5px 0;
+    }
+    .posts-list {
+        grid-template-columns: auto;
     }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1082,6 +1134,7 @@ h1 > span,
 
 .btn-small {
     font-size: 0.75em;
+    padding-inline: 1em;
 }
 
 .btn-groups {
@@ -1151,4 +1204,15 @@ h1 > span,
     to {
         transform: rotate(1turn);
     }
+}
+
+/* Iamges */
+.img-full {
+    width: 100%;
+    height: auto;
+}
+
+.thumb {
+    margin-bottom: 1.5em;
+    overflow: hidden;
 }
